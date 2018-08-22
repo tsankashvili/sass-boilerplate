@@ -1,0 +1,22 @@
+/// colors variables map
+/// @group infinite-map
+/// @access public
+/// @require {function} colors
+/// @example colors(brand,dark) @return {color} // #652d90
+/// @example colors(default) @return {color} // #fff
+
+$colors-config: (
+  default: #fff,
+  brand: (
+  	dark: #652d90,
+    dark-light: #f05523,
+  	light: #faac18
+  ),
+  social: (
+    twitter: #1da1f2,
+    facebook: #3b5998,
+    googleplus: #dd4b39,
+    instagram: #c13584,
+    linkedin: #0077b5
+  )
+);
