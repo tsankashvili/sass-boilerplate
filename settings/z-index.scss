@@ -1,0 +1,19 @@
+// z-index variables map
+
+/// @group infinite-map
+/// @access public
+/// @require {function} z @alias z-index
+/// @example z(cap,first-cap) @return {number} // 1
+/// @example z-index(footer) @return {number} // 3
+
+$z-index-config: (
+  mainContainer,
+  cap: (
+		first-cap,
+  	second-cap
+	),
+  footer,
+  burger-menu,
+  header,
+  hamburger
+);
