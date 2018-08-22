@@ -1,0 +1,22 @@
+// Keyframes animations map
+
+/// @group infinite-map
+/// @access public
+/// @require {function} animations
+/// @example animations(keyframes-name-1) @return {animation properties} // keyframes-name-1 3s ease-in-out forwards
+
+$animation-config: (
+	animation-1: (
+		name: keyframes-name-1,
+		duration: 3s,
+		fill-mode: forwards,
+		animation-timing-function: ease-in-out
+	),
+  animation-2: (
+		name: keyframes-name-2,
+		duration: 1s,
+		fill-mode: backwards,
+		animation-iteration-count: infinite,
+		animation-timing-function: ease
+	)
+);
