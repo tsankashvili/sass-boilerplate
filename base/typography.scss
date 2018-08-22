@@ -1,0 +1,20 @@
+//
+// This file contains all @font-face declarations.
+//
+
+$fonts: "AdriannaExtendedLt",
+		"AdriannaExtendedRg",
+		"AdriannaExtendedXb",
+		"AdriannaLt",
+		"AdriannaRg",
+		"DrukXCondSuperWeb";
+@each $font in $fonts {
+  @font-face {
+    font-family: $font;
+    src: font-url('#{$font}.eot') format('embedded-opentype'),
+    font-url('#{$font}.woff2') format('woff2'),
+    font-url('#{$font}.woff') format('woff'),
+    font-url('#{$font}.ttf') format('truetype'),
+    font-url('#{$font}.svg##{$font}') format('svg');
+  }
+}
