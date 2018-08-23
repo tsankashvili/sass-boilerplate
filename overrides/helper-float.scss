@@ -1,0 +1,27 @@
+//
+// Float Helper Classes
+/// @link https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods
+//
+
+@if $use-helper-float-styles == true {
+  .left  {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+}
+
+@if $use-helper-clearfix-class == true {
+  .clearfix {
+      &:before,
+      &:after {
+          content: " ";
+          display: table;
+      }
+
+      &:after {
+        clear: both;
+      }
+  }
+}
