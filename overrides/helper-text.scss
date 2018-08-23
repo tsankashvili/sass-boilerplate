@@ -49,4 +49,19 @@
 
     }
 
+    .align {
+
+        &--top{
+          vertical-align: top;
+        }
+
+        &--middle{
+          vertical-align: top;
+        }
+
+        &--bottom{
+          vertical-align: top;
+        }
+    }
+
 }
