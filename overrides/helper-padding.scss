@@ -1,0 +1,37 @@
+//
+// Padding Helper Classes
+//
+
+@if $use-helper-padding-styles == true {
+
+    .no-padding {
+        padding: 0;
+
+        &--top {
+            padding-top: 0;
+        }
+
+        &--right {
+            padding-right: 0;
+        }
+
+        &--bottom {
+            padding-bottom: 0;
+        }
+
+        &--left {
+            padding-left: 0;
+        }
+
+        &--sides {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &--ends {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+    }
+}
