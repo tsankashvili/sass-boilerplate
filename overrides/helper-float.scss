@@ -4,12 +4,19 @@
 //
 
 @if $use-helper-float-styles == true {
-  .left  {
-    float: left;
+
+  .float{
+
+    &--left{
+      float: left;
+    }
+
+    &--right{
+      float: right;
+    }
+
   }
-  .right {
-    float: right;
-  }
+  
 }
 
 @if $use-helper-clearfix-class == true {
