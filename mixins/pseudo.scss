@@ -1,0 +1,16 @@
+//
+// useful for when styling :before or :after
+// you neally always need these 3
+/// @group Selectors
+/// @param {value} $display - css display values
+/// @param {value} $pos - css position values
+/// @param {string} $content - specify the content to insert
+/// @example @include pseudo;
+/// @example @include pseudo(inline-block,relative,"-");
+//
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	position: $pos;
+	display: $display;
+}
