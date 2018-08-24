@@ -8,7 +8,7 @@
 /// @ignore https://caniuse.com/#feat=flow-root
 //
 
-@mixin fs-clearfix {
+@mixin clearfix {
   &:before,
   &:after {
     content: " ";
