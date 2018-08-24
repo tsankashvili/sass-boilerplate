@@ -1,7 +1,8 @@
 //
 // Resize anything
 /// @group Main
-/// @param $direction [horizontal, vertical, both]
+/// @link https://css-tricks.com/almanac/properties/r/resize
+/// @param $direction [horizontal, vertical, both, none]
 //
 
 @mixin resizable($direction) {
