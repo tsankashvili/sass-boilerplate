@@ -1,0 +1,17 @@
+//
+/// @group Main
+/// @param {number} $width [CSS - Measurement Units]
+/// @param {number} $height [CSS - Measurement Units]
+/// @alias square
+/// @link https://github.com/twbs/bootstrap-sass
+//
+@mixin size($width: 50px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// @param {number} $size [CSS - Measurement Units]
+@mixin square( $size : 50px ) {
+  height : $size;
+  width  : $size;
+}
