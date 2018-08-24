@@ -1,0 +1,10 @@
+//
+// Resize anything
+/// @group Main
+/// @param $direction [horizontal, vertical, both]
+//
+
+@mixin resizable($direction) {
+  resize: $direction;
+  overflow: auto;  // Safari fix
+}
