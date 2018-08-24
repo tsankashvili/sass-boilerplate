@@ -1,0 +1,21 @@
+//
+// Clears floats in IE 8+
+/// @group Main
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/
+/// @link https://css-tricks.com/snippets/css/clear-fix/
+/// @link https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods
+/// @ignore Consider replacing with “display: flow-root” once support is broad enough.
+/// @ignore https://caniuse.com/#feat=flow-root
+//
+
+@mixin fs-clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
