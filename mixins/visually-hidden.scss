@@ -1,0 +1,38 @@
+//
+/// Hide visually but still be available to screenreaders
+/// @group Main
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+/// @author Jonathan Snook
+/// @example @include visually-hidden;
+//
+
+/*
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ * causes content to wrap 1 word per line:
+ * https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  white-space: nowrap; // [1]
+}
+
+// Undo visually hidden styles
+/// @group Main
+@mixin undo-visually-hidden {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+}
