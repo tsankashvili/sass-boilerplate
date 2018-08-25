@@ -1,0 +1,19 @@
+//
+// Easy vertical ellipsis
+/// @param {Number} $lines-to-show - Number of lines to show
+/// @param {Unitless Value} $line-height - Maximum Height to calculate
+/// @example @include line-clamp($lines-to-show: 3, $line-height: 1.5);
+/// @link https://css-tricks.com/almanac/properties/l/line-clamp
+//
+
+@mixin line-clamp($lines-to-show,$line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines-to-show;
+
+  // (won't show `...` at the end of the block)
+  @if $line-height {
+      max-height: $line-height * $lines-to-show * 1px;
+  }
+}
