@@ -1,0 +1,16 @@
+//
+/// @group Main
+/// @param {Unit Value} $size - CSS Measurement Units
+/// @param {Color} $color - Hex color value
+/// @content [Write the style you want to apply to the circle, and it will be added within the @content directive]
+//
+
+@mixin circle( $size : 50px, $color: '' ) {
+  width : $size;
+  height : $size;
+  border-radius : 50%;
+  @if(type-of($color) == "color") {
+    background-color : $color;
+  }
+  @content
+}
