@@ -1,5 +1,6 @@
 //
 // Easy vertical ellipsis
+/// @group Main
 /// @param {Number} $lines-to-show - Number of lines to show
 /// @param {Unitless Value} $line-height - Maximum Height to calculate
 /// @example @include line-clamp($lines-to-show: 3, $line-height: 1.5);
