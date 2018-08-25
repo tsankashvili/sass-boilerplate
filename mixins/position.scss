@@ -1,0 +1,48 @@
+//
+/// @group positioning
+/// @access private
+/// @param {String} $position - position properties: absolute, fixed, relative
+/// @param {String} $args - position values: top, right, bottom, left
+/// @example @include absolute(top 0 left 1em);
+/// @author Hugo Giraudel
+/// @link https://www.sitepoint.com/sass-mixins-kickstart-project
+//
+
+@mixin position($position, $args) {
+  position: $position;
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+}
+
+// Absolute Positioning
+/// @group positioning
+/// @access public
+/// @param {String} $args - position values: top, right, bottom, left
+/// @require {function} position
+@mixin absolute($args: '') {
+  @include position(absolute, $args);
+}
+
+
+// Fixed Positioning
+/// @group positioning
+/// @access public
+/// @param {String} $args - position values: top, right, bottom, left
+/// @require {function} position
+@mixin fixed($args: '') {
+  @include position(fixed, $args);
+}
+
+
+// Relative Positioning
+/// @group positioning
+/// @access public
+/// @param {String} $args - position values: top, right, bottom, left
+/// @require {function} position
+@mixin relative($args: '') {
+  @include position(relative, $args);
+}
