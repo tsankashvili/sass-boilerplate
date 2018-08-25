@@ -26,7 +26,6 @@
 }
 
 // Undo visually hidden styles
-/// @group Main
 @mixin undo-visually-hidden {
   clip: auto;
   height: auto;
