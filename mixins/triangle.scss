@@ -8,7 +8,7 @@
 /// @link https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss
 //
 
-@mixin fs-triangle($size, $color, $direction) {
+@mixin triangle($size, $color, $direction) {
   height: 0;
   width: 0;
 
