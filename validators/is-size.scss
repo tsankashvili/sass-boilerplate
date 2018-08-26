@@ -1,0 +1,10 @@
+//
+// Check whether `$value` is a valid size.
+/// @param {*} $value - Value to validate.
+/// @return {Bool}
+/// @requires {function} is-length
+//
+@function is-size($value) {
+  @return is-length($value)
+          or contains("fill" "fit-content" "min-content" "max-content", $value);
+}
