@@ -1,0 +1,26 @@
+//
+// Single side border-radius
+/// @group Main
+/// @param {Unit Value} $radius [$base-border-radius] - CSS Measurement Units
+/// @link https://css-tricks.com/almanac/properties/b/border-radius
+//
+
+@mixin border-top-radius($radius: $base-border-radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-right-radius($radius: $base-border-radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: $base-border-radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius: $base-border-radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
