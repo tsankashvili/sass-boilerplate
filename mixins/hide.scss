@@ -1,0 +1,23 @@
+//
+// Hide elements
+/// @group Main
+/// @param {String} $type - block, text, content
+//
+
+@mixin hide($type) {
+  @if( $type == block ){
+    display: none !important;
+    visibility: hidden;
+  }
+
+  @else if( $type == text ){
+    font-size: 0;
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  @else if( $type == content ){
+    visibility: hidden;
+  }
+}
