@@ -9,7 +9,7 @@
   width : $size;
   height : $size;
   border-radius : 50%;
-  @if(type-of($color) == "color") {
+  @if(is-color($color)) {
     background-color : $color;
   }
   @content
