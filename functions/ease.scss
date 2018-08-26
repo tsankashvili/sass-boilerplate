@@ -1,0 +1,19 @@
+//
+// Custom easing function
+/// @group Main
+/// @access public
+/// @param {String} $name - Name of easing
+/// @return {String} - Easing code
+/// @require {Map} $ease - Custom easing map
+/// @link https://css-tricks.com/snippets/sass/easing-map-get-function
+/// @link http://easings.net
+//
+
+@function ease($name) {
+  @if map-has-key($ease, $name) {
+    @return map-get($ease, $name);
+  }
+
+  @warn "Unkown '#{$name}' in $ease.";
+  @return null;
+}
