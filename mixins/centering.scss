@@ -13,6 +13,8 @@
 /// @example @include center($height: 400px) - with-known-height
 /// @example @include center(400px, 400px) - with-known-dimensions
 /// @link https://www.sitepoint.com/centering-with-sass
+/// @link  http://howtocenterincss.com
+/// @link https://css-tricks.com/centering-css-complete-guide
 //
 
 @mixin center($width: null, $height: null) {
