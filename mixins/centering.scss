@@ -1,0 +1,50 @@
+//
+/// Horizontal, vertical or absolute centering
+/// If specified, this mixin will use negative margins
+/// based on element's dimensions. Else, it will rely
+/// on CSS transforms which have a lesser browser support
+/// but are more flexible as they don't require to set
+/// any specific dimensions to the element.
+///
+/// @param {Length | null} $width [null] - Element width
+/// @param {Length | null} $height [null] - Element height
+/// @example @include center - with-unknown-dimensions
+/// @example @include center(400px) - with-known-width
+/// @example @include center($height: 400px) - with-known-height
+/// @example @include center(400px, 400px) - with-known-dimensions
+/// @link https://www.sitepoint.com/centering-with-sass
+//
+
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if not $width and not $height {
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: -($width / 2) #{0 0} -($height / 2)
+  } @else if not $height {
+    margin-left: -($width / 2);
+    transform: translateY(-50%);
+    width: $width;
+  } @else {
+    margin-top: -($height / 2);
+    transform: translateX(-50%);
+    height: $height;
+  }
+}
+
+/// Provided you add relevant vendor prefixes (through the mixin or Autoprefixer),
+/// this solution should Just Work in many browsers.
+/// @example @include center-children
+/// @link https://www.sitepoint.com/centering-with-sass
+/// @link https://caniuse.com/#search=flexbox
+
+@mixin center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
