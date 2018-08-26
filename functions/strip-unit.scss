@@ -1,0 +1,16 @@
+//
+// Remove the unit of a length
+/// @group Utilities
+/// @param {Number (with unit)} $number - Value to strip
+/// @return {Number} - Stripped value
+/// @link http://stackoverflow.com/a/12335841/673457
+/// @link https://css-tricks.com/snippets/sass/strip-unit-function
+//
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
