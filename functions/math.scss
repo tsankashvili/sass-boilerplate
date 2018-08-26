@@ -6,10 +6,8 @@
 
 /// Pi
 /// @type Number
-$pi: 3.141592653589793;
-
 /// @access private
-$pi: $pi;
+$pi: 3.141592653589793;
 
 /// @access private
 @function exp-taylor($x, $steps) {
@@ -175,16 +173,16 @@ $pi: $pi;
 /// @require {function} sin
 /// @require {function} sin-taylor
 @function sin($x, $steps: 32) {
-  $y: $x % (2 * $π);
+  $y: $x % (2 * $pi);
 
-  @if $y > $π {
-    @return -1 * sin($y - $π);
+  @if $y > $pi {
+    @return -1 * sin($y - $pi);
   }
   @else if $y < 0 {
     @return -1 * sin(-$y);
   }
   @else {
-    @return sin-taylor($y % (2 * $π), $steps);
+    @return sin-taylor($y % (2 * $pi), $steps);
   }
 }
 
@@ -195,7 +193,7 @@ $pi: $pi;
 /// @require {variable} $pi
 /// @require {function} sin
 @function cos($x, $steps: 32) {
-  @return sin($x - $π / 2, $steps);
+  @return sin($x - $pi / 2, $steps);
 }
 
 /// Tangent function
