@@ -1,0 +1,10 @@
+//
+// nice, savvy way to write shorthand properties
+// without the need to remember the order of values for CSS like animation and font.
+/// @argument {List} $config
+/// @access private
+/// @link https://www.sitepoint.com/making-use-sass-zip-function
+//
+@function sh-setup($config) {
+  @return zip(map-values($config)...);
+}
