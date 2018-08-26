@@ -1,17 +1,27 @@
 //
-/// @group Main
-/// @param {unit value} $width [CSS - Measurement Units]
-/// @param {unit value} $height [CSS - Measurement Units]
+// Set `width` and `height` in a single statement.
+/// @argument {number (with unit) | string} $width
+/// @argument {number (with unit) | string} $height [$width]
+/// @output `width` and `height`.
+/// @requires {function} is-length
 /// @alias square
-/// @link https://github.com/twbs/bootstrap-sass
+/// @link https://www.bourbon.io/docs/5.0.1/#size
+/// @link https://www.sitepoint.com/bulletproof-function-validate-length-values-sass
 //
-@mixin size($width: 50px, $height: $width) {
-  width: $width;
-  height: $height;
-}
+@mixin size($width, $height: $width) {
+  @if is-length($width) {
+    width: $width;
+  }
 
-/// @param {number} $size [CSS - Measurement Units]
-@mixin square( $size : 50px ) {
-  height : $size;
-  width  : $size;
+  @else {
+    @warn "Invalid length `#{$width}` for `$width` parameter in `size` mixin.";
+  }
+
+  @if is-length($height) {
+    height: $height;
+  }
+
+  @else {
+    @warn "Invalid length `#{$height}` for `$height` parameter in `size` mixin.";
+  }
 }
