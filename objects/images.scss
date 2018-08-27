@@ -1,33 +1,28 @@
 //
-// Images
+// Images Positioning Helper Classes
 //
 
-.image {
+@if $use-image-position-classes == true {
+	.image {
 
-	// Positioning
-	&--right {
+		&--right {
 	    float:right;
-	    margin-bottom:$base-spacing-unit;
-	    margin-left:$base-spacing-unit;
-	}
+	    margin-bottom: $base-spacing-unit;
+	    margin-left: $base-spacing-unit;
+		}
 
-	&--left {
+		&--left {
 	    float:left;
-	    margin-right:$base-spacing-unit;
-	    margin-bottom:$base-spacing-unit;
-	}
+	    margin-right: $base-spacing-unit;
+	    margin-bottom: $base-spacing-unit;
+		}
 
-	&--center {
-	    display:block;
-	    margin-right:auto;
-	    margin-bottom:$base-spacing-unit;
-	    margin-left:auto;
-	}
+		&--center {
+		  display: block;
+		  margin-right: auto;
+		  margin-left: auto;			
+		  margin-bottom: $base-spacing-unit;
+		}
 
-	// Sizes
-	&--250 {
-		max-width: 250px;
-		width: 100%;
 	}
-
 }
