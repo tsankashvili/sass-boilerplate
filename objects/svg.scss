@@ -1,0 +1,43 @@
+//
+// SVGs
+//
+
+.svg {
+
+	&--twitter {
+		fill: $color-twitter;
+	}
+
+	&--facebook {
+		fill: $color-facebook;
+	}
+
+	&--googleplus {
+		fill: $color-googleplus;
+	}
+
+	&--instagram {
+		fill: $color-instagram;
+	}
+
+	&--linkedin {
+		fill: $color-linkedin;
+	}
+
+	&--pinterest {
+		fill: $color-pinterest;
+	}
+
+	&--vimeo {
+		fill: $color-vimeo;
+	}
+
+	&--soundcloud {
+		fill: $color-soundcloud;
+	}
+
+	&--rss {
+		fill: $color-rss;
+	}
+
+}
