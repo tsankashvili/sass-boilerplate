@@ -1,0 +1,13 @@
+//
+/// Helper to get color value from `$colors-config` map
+/// @group Main
+/// @param {Arglist} $color-variant - key from $colors-config colors map
+/// @return {Color} - Color value
+/// @require {function} map-deep-get - Fetch nested keys
+/// @require {variable} $colors-config - Named colors map
+/// @example color: color(social,twitter) -> @return #1da1f2
+//
+
+@function color($color-variant...) {
+  @return map-deep-get($colors-config, $color-variant...);
+}
