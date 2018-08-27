@@ -1,0 +1,10 @@
+//
+// The font spacing mixin will take a value from the Abobe suite and convert it to a pixel value
+/// @param {number} $num - letter-spacing number
+/// @example @include letter-spacing(80);
+/// @link https://scotch.io/tutorials/converting-photoshop-letter-spacing-to-css
+//
+
+@mixin letter-spacing($number, $font-size: 16px ){
+    letter-spacing:  ( strip-unit($number * $font-size) / 1000) * 1px;
+}
