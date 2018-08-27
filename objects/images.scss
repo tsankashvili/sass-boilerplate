@@ -1,0 +1,35 @@
+//
+// Images
+//
+
+$base-spacing-unit: 20px;
+
+.image {
+
+	// Positioning
+	&--right {
+	    float:right;
+	    margin-bottom:$base-spacing-unit;
+	    margin-left:$base-spacing-unit;
+	}
+
+	&--left {
+	    float:left;
+	    margin-right:$base-spacing-unit;
+	    margin-bottom:$base-spacing-unit;
+	}
+
+	&--center {
+	    display:block;
+	    margin-right:auto;
+	    margin-bottom:$base-spacing-unit;
+	    margin-left:auto;
+	}
+
+	// Sizes
+	&--250 {
+		max-width: 250px;
+		width: 100%;
+	}
+
+}
