@@ -1,69 +1,35 @@
+//
 // Breakpoints variables list
+/// @group Breakpoints
+/// @type Map
+/// @see {function} breakpoints
+//
 
 // Breakpoints
-$tiny-xs-breakpoint: 320px;
-$tiny-sm-breakpoint: 480px;
-$tiny-md-breakpoint: 540px;
-$tiny-lg-breakpoint: 640px;
-$small-xs-breakpoint: 768px;
-$small-sm-breakpoint: 800px;
-$small-md-breakpoint: 900px;
-$small-lg-breakpoint: 960px;
-$medium-xs-breakpoint: 1024px;
-$medium-sm-breakpoint: 1280px;
-$medium-md-breakpoint: 1366px;
-$medium-lg-breakpoint: 1440px;
-$large-sm-breakpoint: 1600px;
-$large-md-breakpoint: 1680px;
-$huge-breakpoint: 1920px;
-
-// Breakpoints ranges
-$tiny-xs-range: 0 $tiny-xs-breakpoint - 1;
-$tiny-sm-range: $tiny-xs-breakpoint $tiny-sm-breakpoint;
-$tiny-md-range: ($tiny-sm-breakpoint + 1) $tiny-md-breakpoint;
-$tiny-lg-range: ($tiny-md-breakpoint + 1) $tiny-lg-breakpoint;
-$small-xs-range: ($tiny-lg-breakpoint + 1) $small-xs-breakpoint;
-$small-sm-range: ($small-xs-breakpoint + 1) $small-sm-breakpoint;
-$small-md-range: ($small-sm-breakpoint + 1) $small-md-breakpoint;
-$small-lg-range: ($small-md-breakpoint + 1) $small-lg-breakpoint;
-$medium-xs-range: ($small-lg-breakpoint + 1) $medium-xs-breakpoint;
-$medium-sm-range: ($medium-xs-breakpoint + 1) $medium-sm-breakpoint;
-$medium-md-range: ($medium-sm-breakpoint + 1) $medium-md-breakpoint;
-$medium-lg-range: ($medium-md-breakpoint + 1) $medium-lg-breakpoint;
-$large-sm-range: ($medium-lg-breakpoint + 1) $large-sm-breakpoint;
-$large-md-range: ($large-sm-breakpoint + 1) $large-md-breakpoint;
-$huge-range: ($large-md-breakpoint + 1) $huge-breakpoint;
-
-// Breakpoints min-width
-$tiny-xs-up: min-width $tiny-xs-breakpoint;
-$tiny-sm-up: min-width $tiny-sm-breakpoint;
-$tiny-md-up: min-width $tiny-md-breakpoint;
-$tiny-lg-up: min-width $tiny-lg-breakpoint;
-$small-xs-up: min-width $small-xs-breakpoint;
-$small-sm-up: min-width $small-sm-breakpoint;
-$small-md-up: min-width $small-md-breakpoint;
-$small-lg-up: min-width $small-lg-breakpoint;
-$medium-xs-up: min-width $medium-xs-breakpoint;
-$medium-sm-up: min-width $medium-sm-breakpoint;
-$medium-md-up: min-width $medium-md-breakpoint;
-$medium-lg-up: min-width $medium-lg-breakpoint;
-$large-sm-up: min-width $large-sm-breakpoint;
-$large-md-up: min-width $large-md-breakpoint;
-$huge-up: min-width $huge-breakpoint;
-
-// Breakpoints max-width
-$tiny-xs-down: max-width $tiny-xs-breakpoint;
-$tiny-sm-down: max-width $tiny-sm-breakpoint;
-$tiny-md-down: max-width $tiny-md-breakpoint;
-$tiny-lg-down: max-width $tiny-lg-breakpoint;
-$small-xs-down: max-width $small-xs-breakpoint;
-$small-sm-down: max-width $small-sm-breakpoint;
-$small-md-down: max-width $small-md-breakpoint;
-$small-lg-down: max-width $small-lg-breakpoint;
-$medium-xs-down: max-width $medium-xs-breakpoint;
-$medium-sm-down: max-width $medium-sm-breakpoint;
-$medium-md-down: max-width $medium-md-breakpoint;
-$medium-lg-down: max-width $medium-lg-breakpoint;
-$large-sm-down: max-width $large-sm-breakpoint;
-$large-md-down: max-width $large-md-breakpoint;
-$huge-down: max-width $huge-breakpoint;
+$breakpoints-config: (
+  tiny: (
+    xs: 320px,
+    sm: 480px,
+    md: 540px,
+    lg: 640px
+  ),
+  small: (
+    xs: 768px,
+    sm: 800px,
+    md: 900px,
+    lg: 960px
+  ),
+  medium: (
+    xs: 1024px,
+    sm: 1280px,
+    md: 1366px,
+    lg: 1440px
+  ),
+  large: (
+    sm: 1600px,
+    md: 1680px
+  ),
+  huge: (
+    xs: 1920px
+  )
+);
