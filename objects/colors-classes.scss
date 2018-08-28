@@ -1,0 +1,23 @@
+//
+// Colors Helper Classes
+/// @require {Boolean} $use-color-classes - base variables
+/// @require {Function} color - helper function to get color value
+//
+
+@if $use-color-classes == true {
+
+	$color-list: join(color(social),color(messages));
+
+	@each $name, $color in $color-list {
+
+		.color--#{$name} {
+			color: $color;
+		}
+
+		.background--#{$name} {
+			background-color: $color;
+		}
+
+	}
+
+}

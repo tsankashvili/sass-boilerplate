@@ -2,7 +2,7 @@
 // Colors variables map
 /// @group infinite-map
 /// @access public
-/// @require {Function} color
+/// @see {Function} color - helper function to get color value
 /// @example background-color: color(brand,dark) @return {Color} // #652d90
 /// @example color: color(default) @return {Color} // #fff
 //
