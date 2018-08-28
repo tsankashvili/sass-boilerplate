@@ -61,6 +61,7 @@
 }
 
 // Test if map got all `$keys` at first level
+/// @access private
 /// @author Hugo Giraudel
 /// @param {Map} $map - Map
 /// @param {Arglist} $keys - Keys to test
@@ -77,6 +78,7 @@
 }
 
 // Test if map got all `$keys` nested with each others
+/// @access private
 /// @author Hugo Giraudel
 /// @param {Map} $map - Map
 /// @param {Arglist} $keys - Keys to test
@@ -95,6 +97,7 @@
 
 // An equivalent of `zip` function but for maps.
 // Takes two lists, the first for keys, second for values.
+/// @access private
 /// @param {List} $keys - Keys for map
 /// @param {List} $values - Values for map
 /// @return {Map} Freshly created map
@@ -125,6 +128,7 @@
 // About `map-merge()`:
 // * only takes 2 arguments
 // * is not recursive
+/// @access private
 /// @param {Map} $map - first map
 /// @param {ArgList} $maps - other maps
 /// @param {Boolean} $deep - recursive mode

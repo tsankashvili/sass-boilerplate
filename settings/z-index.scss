@@ -9,13 +9,13 @@
 //
 
 $z-index-config: (
-  mainContainer,
+  mainContainer: (),
   cap: (
-		first-cap,
-  	second-cap
+		first-cap: (),
+  	second-cap: ()
 	),
-  footer,
-  burger-menu,
-  header,
-  hamburger
+  footer: (),
+  burger-menu: (),
+  header: (),
+  hamburger: ()
 );

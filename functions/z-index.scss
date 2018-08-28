@@ -1,0 +1,30 @@
+//
+// Helper to get z-index value from `$z-index-config` map
+/// @group Main
+/// @param {Arglist} $key - key from $z-index-config layers map
+/// @return {Number} - z-index value
+/// @require {variable} $z-index-config - names layers map
+/// @alias z
+/// @example z-index: z-index(cap,second-cap) @return {Number} // 2
+//
+
+@function z-index($keys) {
+    $map: $z-index-config;
+    $found-index: null;
+
+    @each $key in $keys {
+        @if (type-of($map) == "map") {
+            $found-index: index(map-keys($map), $key);
+            $map: map-get($map, $key);
+        }
+        @else {
+            $found-index: index($map, $key);
+        }
+    }
+
+    @return $found-index;
+}}
+
+@function z($key...) {
+  @return z-index($key);
+}
