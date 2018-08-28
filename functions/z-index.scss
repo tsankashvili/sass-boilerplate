@@ -23,7 +23,7 @@
     }
 
     @return $found-index;
-}}
+}
 
 @function z($key...) {
   @return z-index($key);
