@@ -1,0 +1,14 @@
+//
+/// @see {variable} $animation-config - Keyframes animations map
+/// @see {function} animations - Helper function to get animations value from `$animation-config` map
+/// @link https://tympanus.net/codrops/css_reference/keyframes
+//
+
+@keyframes bouncing {
+    0%, 50%, 100% { /* OR from, 50%, to */
+        top: 0;
+    }
+    25%, 75% {
+        top: 100px;
+    }
+}
