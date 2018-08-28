@@ -1,5 +1,7 @@
 //
 // Images Positioning Helper Classes
+/// @require {Boolean} $use-image-position-classes - base variable in Settings
+/// @require {Variable} $base-spacing-unit - global-properties variable
 //
 
 @if $use-image-position-classes == true {
@@ -20,7 +22,7 @@
 		&--center {
 		  display: block;
 		  margin-right: auto;
-		  margin-left: auto;			
+		  margin-left: auto;
 		  margin-bottom: $base-spacing-unit;
 		}
 

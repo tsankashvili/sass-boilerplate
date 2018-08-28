@@ -1,9 +1,11 @@
 //
 // Check whether `$list` contains `$value`.
+/// @group Utilities
+/// @access private
 /// @param {List} $list  - List of values.
 /// @param {*} $value - Value to check in the list.
-/// @return {Bool}
-/// @link https://www.sitepoint.com/bulletproof-function-validate-length-values-sass/
+/// @return {Boolean}
+/// @link https://www.sitepoint.com/bulletproof-function-validate-length-values-sass
 //
 
 @function contains($list, $value) {

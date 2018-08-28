@@ -1,7 +1,7 @@
 //
 // Colors Helper Classes
-/// @require {Boolean} $use-color-classes - base variables
-/// @require {Function} color - helper function to get color value
+/// @require {Boolean} $use-color-classes - base variable in Settings
+/// @require {function} color - helper function to get color value
 //
 
 @if $use-color-classes == true {

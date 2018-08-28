@@ -1,9 +1,10 @@
 //
 // Custom easings map
 /// @type Map
-/// @see {function} ease - Custom easing function
+/// @see {function} ease - helper function to get ease value
 /// @link http://easings.net
 ///
+
 $ease: (
   in-quad:      cubic-bezier(0.550,  0.085, 0.680, 0.530),
   in-cubic:     cubic-bezier(0.550,  0.055, 0.675, 0.190),

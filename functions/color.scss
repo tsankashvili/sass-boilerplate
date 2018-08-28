@@ -3,7 +3,7 @@
 /// @group Main
 /// @param {Arglist} $color-variant - key from $colors-config colors map
 /// @return {Color} - Color value
-/// @require {Function} map-deep-get - Fetch nested keys
+/// @require {function} map-deep-get - Fetch nested keys
 /// @require {Variable} $colors-config - Named colors map
 /// @example color: color(social,twitter) @return {Color} // #1da1f2
 //

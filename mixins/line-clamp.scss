@@ -1,8 +1,8 @@
 //
 // Easy vertical ellipsis
 /// @group Main
-/// @param {Number} $lines-to-show - Number of lines to show
-/// @param {Unitless Value} $line-height - Maximum Height to calculate
+/// @param {Number (Int)} $lines-to-show - Number of lines to show
+/// @param {Number (float)} $line-height - Maximum Height to calculate
 /// @example @include line-clamp($lines-to-show: 3, $line-height: 1.5);
 /// @link https://css-tricks.com/almanac/properties/l/line-clamp
 //

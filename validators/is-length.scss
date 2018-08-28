@@ -1,9 +1,12 @@
+//
 // Check whether `$value` is a valid length.
 /// @group Utilities
+/// @access private
 /// @param {*} $value - Value to validate.
 /// @return {Boolean}
-/// @link http://www.sitepoint.com/bulletproof-function-validate-length-values-sass/
 /// @require {function} contains
+/// @link http://www.sitepoint.com/bulletproof-function-validate-length-values-sass/
+//
 
 @function is-length($value) {
   @return contains(0 'auto' 'initial' 'inherit', $value) or type-of($value) == 'number' and not unitless($value) or str-slice($value + '', 1, 4) == 'calc';

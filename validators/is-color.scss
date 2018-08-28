@@ -1,8 +1,9 @@
 //
 // Checks for a valid CSS color.
-/// @argument {string} $color
-/// @return {boolean}
+/// @group Utilities
 /// @access private
+/// @argument {String} $color - Hex color value
+/// @return {Boolean}
 //
 
 @function is-color($color) {

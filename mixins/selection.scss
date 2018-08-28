@@ -1,12 +1,11 @@
 //
 /// @group Selectors
 /// @content [Write the style you want to apply to the selection, and it will be added within the @content directive]
-/// @link https://css-tricks.com/almanac/selectors/s/selection
 /// @example placeholder { background-color : #D7624E }
+/// @link https://css-tricks.com/almanac/selectors/s/selection
 //
 
 @mixin selection {
 	&::-moz-selection { @content; }
 	&::selection { @content; }
 }
- 

@@ -1,9 +1,12 @@
+//
 // Keyframes animations map
-
 /// @group infinite-map
 /// @access public
-/// @require {function} animations
-/// @example animations(keyframes-name-1) @return {animation properties} // keyframes-name-1 3s ease-in-out forwards
+/// @type Map
+/// @see {function} animations - helper functions to get animation value
+/// @example animations(keyframes-name-1) @return {List} // keyframes-name-1 3s ease-in-out forwards
+/// @example animations(keyframes-name-1, keyframes-name-2) @return {List} // keyframes-name-1 3s ease-in-out forwards, keyframes-name-2 1s ease infinite backwards
+//
 
 $animation-config: (
 	animation-1: (

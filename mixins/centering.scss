@@ -6,8 +6,8 @@
 /// but are more flexible as they don't require to set
 /// any specific dimensions to the element.
 ///
-/// @param {Length | null} $width [null] - Element width
-/// @param {Length | null} $height [null] - Element height
+/// @param {Number (with unit) | string | null} $width [null] - Element width
+/// @param {Number (with unit) | string | null} $height [null] - Element height
 /// @example @include center - with-unknown-dimensions
 /// @example @include center(400px) - with-known-width
 /// @example @include center($height: 400px) - with-known-height

@@ -1,10 +1,12 @@
+//
 // z-index variables map
-
 /// @group infinite-map
 /// @access public
-/// @require {function} z @alias z-index
-/// @example z(cap,first-cap) @return {number} // 1
-/// @example z-index(footer) @return {number} // 3
+/// @type Map
+/// @see {function} z @alias z-index - helper functions to get z-index value
+/// @example z(cap,first-cap) @return {Number} // 1
+/// @example z-index(footer) @return {Number} // 3
+//
 
 $z-index-config: (
   mainContainer,

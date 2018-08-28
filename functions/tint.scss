@@ -5,6 +5,7 @@
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 // @link http://compass-style.org/reference/compass/helpers/colors/#tint
+//
 
 @function tint($color, $percentage) {
   @return mix(white, $color, $percentage);
