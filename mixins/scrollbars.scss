@@ -6,6 +6,7 @@
 /// @param {Color} $foreground-color - Scrollbar's color
 /// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
 /// @example  @include scrollbars(.5em, slategray);
+/// @link https://css-tricks.com/snippets/sass/custom-scrollbars-mixin
 //
 
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
