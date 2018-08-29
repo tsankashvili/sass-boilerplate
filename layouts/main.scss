@@ -1,0 +1,40 @@
+::selection {
+  background: rgba(colors(brand,light),.95);
+  color: colors(brand,light);
+}
+
+html,body{
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+html{
+  opacity: 0;
+  transition: opacity $body-fadein-time $default-timing-func 0.15s;
+
+  &.locked,
+  &:not(.loaded),
+  &.ready.locked{
+    overflow: hidden;
+  }
+
+  &.ready{
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+}
+
+a:focus,a:active{
+  color: colors(brand,dark);
+}
+
+#app,
+#main-container{
+  min-height: 100vh;
+  width: 100%;
+}
