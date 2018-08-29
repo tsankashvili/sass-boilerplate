@@ -1,15 +1,15 @@
 //
-// Helper to get animations value from `$animation-config` map
+// Helper to get animations value from `$animations-map` map
 /// @group Main
-/// @param {Arglist} $config - key from $animation-config layers map
+/// @param {Arglist} $list - key from $animations-map layers map
 /// @return {List} - animations value
-/// @require {variable} $animation-config - names layers map
+/// @require {variable} $animations-map - names layers map
 /// @require {function} sh-setup
 /// @example animations(keyframes-name-1) @return {List} // keyframes-name-1 3s ease-in-out forwards
 /// @example animations(keyframes-name-1, keyframes-name-2) @return {List} // keyframes-name-1 3s ease-in-out forwards, keyframes-name-2 1s ease infinite backwards
 //
 
-@function animations($config){
-  $map: map-get($animation-config,$config);
+@function animations($list){
+  $map: map-get($animations-map,$list);
   @return sh-setup($map);
 }

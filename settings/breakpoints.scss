@@ -1,12 +1,12 @@
 //
-// Breakpoints variables list
+// Breakpoints variables map
 /// @group Breakpoints
 /// @type Map
 /// @see {function} breakpoints
 //
 
 // Breakpoints
-$breakpoints-config: (
+$breakpoints-map: (
   tiny: (
     xs: 320px,
     sm: 480px,
