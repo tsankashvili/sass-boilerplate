@@ -1,13 +1,15 @@
 //
 // This file contains all @font-face declarations.
+/// @require {function} font-url - Font asset helper
 //
 
 $fonts: "AdriannaExtendedLt",
-		"AdriannaExtendedRg",
-		"AdriannaExtendedXb",
-		"AdriannaLt",
-		"AdriannaRg",
-		"DrukXCondSuperWeb";
+				"AdriannaExtendedRg",
+				"AdriannaExtendedXb",
+				"AdriannaLt",
+				"AdriannaRg",
+				"DrukXCondSuperWeb";
+
 @each $font in $fonts {
   @font-face {
     font-family: $font;
