@@ -1,0 +1,61 @@
+//
+// custom breakpoint[$breakpoints-map] manipulation
+/// @group Breakpoints
+/// @require {Map} $breakpoints-map
+/// @require {mixin} breakpoint - breakpoint-sass main mixin
+/// @require {function} map-deep-get - Fetch nested keys
+/// @require {function} first - first element of $list
+/// @require {function} last - last element of $list
+/// @require {function} contains - Check whether `$list` contains `$value`.
+/// @require {function} remove - Remove value(s) $value from $list
+/// @param {ArgList}
+/// @content [Write the style you want to apply to the breakpoint, and it will be added within the @content directive]
+/// @example @include breakpoints(tiny,xs); @return @media (min-width: 320px) { @content }
+/// @example @include breakpoints(max-width,medium,xs); @return @media (max-width: 1024px) { @content }
+//
+
+@mixin breakpoints($keys...){
+  $first: first($keys);
+  $last: last($keys);
+
+  @if(contains(min-width max-width min-height max-height,$first)){
+    $keys: remove($keys,$first);
+    $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
+
+    $query: unquote($first+' '+$get-breakpoint) !global;
+  }
+  @else if($first == 'range'){
+    $keys: remove($keys,$first);
+    $list: ();
+
+    @if(length($keys) == 2){
+      @each $index, $map in $breakpoints-map {
+       $value: map-values($map);
+       $list: join($list,$value,comma);
+      }
+      $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
+      $index: index($list,$get-breakpoint);
+
+      @if($index == 1){
+        $query: 0 $get-breakpoint - 1px !global;
+      }
+      @else if($index == 2){
+       $query: nth($list,$index - 1) $get-breakpoint !global;
+      }
+      @else{
+        $query: nth($list,$index - 1) + 1px $get-breakpoint !global;
+      }
+    }
+  }
+  @else if(not is-size($last)){
+    $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
+    $query: $get-breakpoint !global;
+  }
+  @else{
+    $query: $keys !global;
+  }
+
+  @include breakpoint($query){
+    @content;
+  }
+}
