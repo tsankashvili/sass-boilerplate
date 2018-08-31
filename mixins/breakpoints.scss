@@ -18,12 +18,13 @@
 @mixin breakpoints($keys...){
   $first: first($keys);
   $last: last($keys);
+  $query: null;
 
   @if(contains(min-width max-width min-height max-height,$first)){
     $keys: remove($keys,$first);
     $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
 
-    $query: unquote($first+' '+$get-breakpoint) !global;
+    $query: unquote($first+' '+$get-breakpoint);
   }
   @else if($first == 'range'){
     $keys: remove($keys,$first);
@@ -38,22 +39,22 @@
       $index: index($list,$get-breakpoint);
 
       @if($index == 1){
-        $query: 0 $get-breakpoint - 1px !global;
+        $query: 0 $get-breakpoint - 1px;
       }
       @else if($index == 2){
-       $query: nth($list,$index - 1) $get-breakpoint !global;
+       $query: nth($list,$index - 1) $get-breakpoint;
       }
       @else{
-        $query: nth($list,$index - 1) + 1px $get-breakpoint !global;
+        $query: nth($list,$index - 1) + 1px $get-breakpoint;
       }
     }
   }
   @else if(not is-size($last)){
     $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
-    $query: $get-breakpoint !global;
+    $query: $get-breakpoint;
   }
   @else{
-    $query: $keys !global;
+    $query: $keys;
   }
 
   @include breakpoint($query){
