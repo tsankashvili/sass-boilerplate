@@ -32,21 +32,17 @@
 
     @if(length($keys) == 2){
       @each $index, $map in $breakpoints-map {
-       $value: map-values($map);
-       $list: join($list,$value,comma);
+        $value: map-values($map);
+        $list: join($list,$value,comma);
       }
       $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
       $index: index($list,$get-breakpoint);
 
-      @if($index == 1){
-        $query: 0 $get-breakpoint - 1px;
-      }
-      @else if($index == 2){
-       $query: nth($list,$index - 1) $get-breakpoint;
-      }
-      @else{
-        $query: nth($list,$index - 1) + 1px $get-breakpoint;
-      }
+      $query: if($index == 1 or $index == 2,
+                if($index == 1,
+                  0 $get-breakpoint - 1px,
+                  nth($list,$index - 1) $get-breakpoint),
+                nth($list,$index - 1) + 1px $get-breakpoint);
     }
   }
   @else if(not is-size($last)){
