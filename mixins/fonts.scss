@@ -1,0 +1,57 @@
+//
+// responsive font mixin
+/// @group Font
+/// @access public
+/// @require {Map} $breakpoints-map
+/// @require {function} remove - Remove value(s) $value from $list
+/// @require {function} str-to-list - Remove value(s) $value from $list
+/// @require {function} map-has-key - Test if map got all `$keys` at first level
+/// @param {string} $fonts
+/// @content [Write the style you want to apply to the font, and it will be added within the @content directive]
+/// @example body{ @include font('bpg-nino-mtavruli' small-xs 38px huge 52px) }
+///      @return body {font-family:'bpg-nino-mtavruli; @content }
+///              @media (min-width: 768px) { body { font-size: 38px; }  }
+///              @media (min-width: 1920px) { body { font-size: 52px; }  }
+//
+@mixin font($fonts){
+  $fonts: str-to-list(inspect($fonts));
+  $first: nth($fonts,1);
+  $map: ();
+  $media: '';
+
+  @each $breakpoint in $breakpoints-map{
+    $key: nth($breakpoint, 1);
+    $values: nth($breakpoint, 2);
+
+    @each $value in $values{
+      $key2: nth($value, 1);
+      $value2: nth($value, 2);
+
+      @if(index($values,$value)==1){
+        $map: map-merge($map, ($key: $value2));
+      }
+      $map: map-merge($map, ($key+'-'+$key2: $value2));
+    }
+  }
+
+  @if(not map-has-key($map,$first)){
+    font-family: $first;
+
+    $fonts: remove($fonts,$first);
+  }
+
+  @for $i from 1 through length($fonts){
+    $value: nth($fonts,$i);
+
+    @if($i%2==0){
+      @media (min-width: $media) {
+        font-size: $value;
+      }
+    }
+    @else{
+      $media: map-get($map,$value);
+    }
+  }
+
+  @content;
+}
