@@ -1,0 +1,26 @@
+//
+// One deep $breakpoints-map
+/// @group Breakpoints
+/// @access private
+/// @require {Map} $breakpoints-map - Breakpoints variables map
+/// @return {Map}
+//
+
+@function breakpoints-map(){
+  $map: ();
+  @each $breakpoint in $breakpoints-map{
+    $key: nth($breakpoint, 1);
+    $values: nth($breakpoint, 2);
+
+    @each $value in $values{
+      $key2: nth($value, 1);
+      $value2: nth($value, 2);
+
+      @if(index($values,$value)==1){
+        $map: map-merge($map, ($key: $value2));
+      }
+      $map: map-merge($map, ($key+'-'+$key2: $value2));
+    }
+  }
+  @return $map;
+}
