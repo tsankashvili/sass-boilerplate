@@ -1,6 +1,6 @@
 //
 // responsive font mixin
-/// @group Font
+/// @group Fonts
 /// @access public
 /// @require {Map} $breakpoints-map
 /// @require {function} remove - Remove value(s) $value from $list
@@ -8,16 +8,18 @@
 /// @require {function} map-has-key - Test if map got all `$keys` at first level
 /// @param {string} $fonts
 /// @content [Write the style you want to apply to the font, and it will be added within the @content directive]
-/// @example body{ @include font('bpg-nino-mtavruli' small-xs 38px huge 52px) }
-///      @return body {font-family:'bpg-nino-mtavruli; @content }
-///              @media (min-width: 768px) { body { font-size: 38px; }  }
+/// @example body{ @include fonts('bpg-nino-mtavruli' small-xs 38px huge 52px) }
+///      @return
+///              body {font-family:'bpg-nino-mtavruli; @content }
+///              @media (min-width: 768px) and (max-width: 1919px) { body { font-size: 38px; }  }
 ///              @media (min-width: 1920px) { body { font-size: 52px; }  }
 //
-@mixin font($fonts){
+
+@mixin fonts($fonts){
   $fonts: str-to-list(inspect($fonts));
   $first: nth($fonts,1);
   $map: ();
-  $media: '';
+  $min-width: '';
 
   @each $breakpoint in $breakpoints-map{
     $key: nth($breakpoint, 1);
@@ -44,12 +46,21 @@
     $value: nth($fonts,$i);
 
     @if($i%2==0){
-      @media (min-width: $media) {
-        font-size: $value;
+      @if(length($fonts) > $i + 1){
+        $max-width: map-get($map,nth($fonts,$i + 1));
+
+        @media (min-width: $min-width) and (max-width: $max-width - 1px){
+          font-size: $value;
+        }
+      }
+      @else{
+        @media (min-width: $min-width){
+          font-size: $value;
+        }
       }
     }
     @else{
-      $media: map-get($map,$value);
+      $min-width: map-get($map,$value);
     }
   }
 
