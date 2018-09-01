@@ -23,6 +23,7 @@
 /// @require {function} contains - Check whether `$list` contains `$value`.
 /// @require {function} remove - Remove value(s) $value from $list
 /// @require {function} is-size - Check whether `$value` is a valid size.
+/// @require {function} str-to-list - Remove value(s) $value from $list
 /// @param {ArgList}
 /// @content [Write the style you want to apply to the breakpoint, and it will be added within the @content directive]
 /// @alias breakpoints
