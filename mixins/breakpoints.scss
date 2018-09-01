@@ -1,8 +1,22 @@
 //
-// custom breakpoint[$breakpoints-map] manipulation
 /// @group Breakpoints
+/// @access private
+/// @require {Map} $breakpoints-map - Breakpoints variables map
+/// @see {Mixin} breakpoints - This mixin is used
+/// @param {value} $key - $breakpoints-map key
+/// @return {string} - Returns the value from a map with a given key
+//
+
+@function breakpoint-first-value($key){
+  @return first(map-values(map-get($breakpoints-map,$key)));
+}
+
+//
+// responsive breakpoint mixin
+/// @group Breakpoints
+/// @access public
 /// @require {Map} $breakpoints-map
-/// @require {mixin} breakpoint - breakpoint-sass main mixin
+/// @require {mixin} mq - breakpoint-sass main mixin
 /// @require {function} map-deep-get - Fetch nested keys
 /// @require {function} first - first element of $list
 /// @require {function} last - last element of $list
@@ -11,29 +25,38 @@
 /// @require {function} is-size - Check whether `$value` is a valid size.
 /// @param {ArgList}
 /// @content [Write the style you want to apply to the breakpoint, and it will be added within the @content directive]
-/// @example @include breakpoints(tiny,xs); @return @media (min-width: 320px) { @content }
-/// @example @include breakpoints(max-width,medium,xs); @return @media (max-width: 1024px) { @content }
+/// @alias breakpoints
+/// @example @include breakpoint(tiny xs); @return @media (min-width: 320px) { @content }
+/// @example @include breakpoint(huge); @return @media (min-width: 1920px) { @content }
+/// @example @include breakpoint(range medium); @return @media (min-width: 769px) and (max-width: 1024px) { @content }
+/// @example @include breakpoint(max-width medium xs); @return @media (max-width: 1024px) { @content }
+/// @example @include breakpoint(max-width medium); @return @media (max-width: 1024px) { @content }
 //
 
-@mixin breakpoints($keys...){
+@mixin breakpoint($keys, $no-query: false){
+  $keys: str-to-list(inspect($keys));
+
   $first: first($keys);
   $last: last($keys);
-  $query: null;
+  $query: $keys !default;
 
   @if(contains(min-width max-width min-height max-height,$first)){
     $keys: remove($keys,$first);
-    $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
+
+    $get-breakpoint: if(length($keys) == 1,
+                        breakpoint-first-value($last),
+                        map-deep-get($breakpoints-map,$keys...));
 
     $query: unquote($first+' '+$get-breakpoint);
   }
-  @else if($first == 'range'){
+  @if($first == "range"){
     $keys: remove($keys,$first);
     $list: ();
 
     @if(length($keys) == 2){
       @each $index, $map in $breakpoints-map {
-        $value: map-values($map);
-        $list: join($list,$value,comma);
+         $value: map-values($map);
+         $list: join($list,$value,comma);
       }
       $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
       $index: index($list,$get-breakpoint);
@@ -44,16 +67,31 @@
                   nth($list,$index - 1) $get-breakpoint),
                 nth($list,$index - 1) + 1px $get-breakpoint);
     }
+    @else if(length($keys) == 1){
+      @if(index(map-keys($breakpoints-map),$last) == 1){
+        $query: 0 breakpoint-first-value($last);
+      }
+      @else{
+        $keys: map-keys($breakpoints-map);
+        $prev: nth($keys,index($keys,$last) - 1);
+        $extra-px: if(index($keys,$last) == 2,0px,1px);
+        $query: breakpoint-first-value($prev) + $extra-px breakpoint-first-value($last);
+      }
+    }
   }
-  @else if(not is-size($last)){
-    $get-breakpoint: map-deep-get($breakpoints-map,$keys...);
-    $query: $get-breakpoint;
-  }
-  @else{
-    $query: $keys;
+  @else if(contains(join((),map-keys($breakpoints-map),space),$first)) {
+    $query: if(length($keys) == 1,
+              breakpoint-first-value($last),
+              map-deep-get($breakpoints-map,$keys...));
   }
 
-  @include breakpoint($query){
+  @include mq($query, $no-query){
+    @content;
+  }
+}
+
+@mixin breakpoints($keys, $no-query: false){
+  @include breakpoint($query, $no-query){
     @content;
   }
 }
