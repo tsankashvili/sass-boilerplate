@@ -389,3 +389,26 @@
 
   @return $result;
 }
+
+//
+/// converts a string to a list
+/// @param {$string} $string
+/// @param {string} $separator
+/// @param {number} $startAt
+/// @example str-to-list(a b c d) => a,b,c,d
+/// @example str-to-list(a-b-c-d,'-') => a,b,c,d
+/// @link https://gist.github.com/benib/92b22ef0716d571d796a
+//
+
+@function str-to-list($string, $separator: ' ', $startAt: 1) {
+    $workStr: str-slice($string,$startAt);
+    $list: ();
+    $indexOfFirstSpace: str-index($workStr,$separator);
+    @if $indexOfFirstSpace == null {
+        $list: ($workStr);
+    } @else {
+        $list: (str-slice($workStr, 1, $indexOfFirstSpace - 1));
+        $list: join($list,str-to-list($workStr,$separator,$startAt: $indexOfFirstSpace + 1));
+    }
+    @return $list;
+}
