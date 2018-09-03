@@ -5,39 +5,23 @@
 .svg {
 
 	&--twitter {
-		fill: $color-twitter;
+		fill: color(social,twitter);
 	}
 
 	&--facebook {
-		fill: $color-facebook;
+		fill: color(social,facebook);
 	}
 
 	&--googleplus {
-		fill: $color-googleplus;
+		fill: color(social,googleplus);
 	}
 
 	&--instagram {
-		fill: $color-instagram;
+		fill: color(social,instagram);
 	}
 
 	&--linkedin {
-		fill: $color-linkedin;
-	}
-
-	&--pinterest {
-		fill: $color-pinterest;
-	}
-
-	&--vimeo {
-		fill: $color-vimeo;
-	}
-
-	&--soundcloud {
-		fill: $color-soundcloud;
-	}
-
-	&--rss {
-		fill: $color-rss;
+		fill: color(social,linkedin);
 	}
 
 }
