@@ -5,7 +5,15 @@
   'settings/colors',
   'settings/modules-widgets',
   'settings/global-properties',
+  'settings/breakpoints',
   'settings/animations',
   'settings/easeing',
   'settings/transitions',
   'settings/z-index';
+
+// Import validators
+@import
+  'validators/contains',
+  'validators/is-length',
+  'validators/is-color',
+  'validators/is-size';
