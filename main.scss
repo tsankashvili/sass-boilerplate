@@ -1,13 +1,13 @@
 // Import Settings - Global Variables and Settings for SCSS
 @import
   'settings/base-options',
-  'settings/font-text',
+  'settings/fonts-text',
   'settings/colors',
   'settings/modules-widgets',
   'settings/global-properties',
   'settings/breakpoints',
   'settings/animations',
-  'settings/easeing',
+  'settings/easings',
   'settings/transitions',
   'settings/z-index';
 
@@ -20,7 +20,7 @@
 
 // Import Libraries
 @import
-  'vendors/breakpoints-sass/_breakpoint';
+  'vendors/breakpoint-sass/_breakpoint';
 
 // Import Functions
 @import
@@ -30,7 +30,7 @@
   'functions/list-functions',
   'functions/unitconversion',
   'functions/to-number',
-  'functions/str-replace',
+  'functions/string-replace',
   'functions/strip-unit',
   'functions/breakpoints-map',
   'functions/animations',
@@ -40,28 +40,28 @@
   'functions/shade',
   'functions/z-index';
 
-// Import mixins
+// Import mixinss
 @import
-  'mixin/border-radius',
-  'mixin/breakpoints',
-  'mixin/centering',
-  'mixin/circle',
-  'mixin/clearfix',
-  'mixin/fonts',
-  'mixin/hide',
-  'mixin/letter-spacing',
-  'mixin/line-clamp',
-  'mixin/nth-child',
-  'mixin/placeholder',
-  'mixin/position',
-  'mixin/pseudo',
-  'mixin/resize',
-  'mixin/scrollbars',
-  'mixin/section',
-  'mixin/size',
-  'mixin/text-crop',
-  'mixin/triagle',
-  'mixin/visually-hidden';
+  'mixins/border-radius',
+  'mixins/breakpoints',
+  'mixins/centering',
+  'mixins/circle',
+  'mixins/clearfix',
+  'mixins/fonts',
+  'mixins/hide',
+  'mixins/letter-spacing',
+  'mixins/line-clamp',
+  'mixins/nth-child',
+  'mixins/placeholder',
+  'mixins/position',
+  'mixins/pseudo',
+  'mixins/resize',
+  'mixins/scrollbars',
+  'mixins/selection',
+  'mixins/size',
+  'mixins/text-crop',
+  'mixins/triangle',
+  'mixins/visually-hidden';
 
 // Import Generic - Low Specificity, far reaching styles eg. resets
 @import
