@@ -1,4 +1,4 @@
-// Import Settings - Global Variables and Settings for SCSS
+/* Import Settings - Global Variables and Settings for SCSS */
 @import
   'settings/base-options',
   'settings/fonts-text',
@@ -11,18 +11,18 @@
   'settings/transitions',
   'settings/z-index';
 
-// Import validators
+/* Import validators */
 @import
   'validators/contains',
   'validators/is-length',
   'validators/is-color',
   'validators/is-size';
 
-// Import Libraries
+/* Import Libraries */
 @import
   'vendors/breakpoint-sass/_breakpoint';
 
-// Import Functions
+/* Import Functions */
 @import
   'functions/sh-setup',
   'functions/math',
@@ -40,7 +40,7 @@
   'functions/shade',
   'functions/z-index';
 
-// Import mixinss
+/* Import mixinss */
 @import
   'mixins/border-radius',
   'mixins/breakpoints',
@@ -63,44 +63,44 @@
   'mixins/triangle',
   'mixins/visually-hidden';
 
-// Import Generic - Low Specificity, far reaching styles eg. resets
+/* Import Generic - Low Specificity, far reaching styles eg. resets */
 @import
   'generic/reset',
   'generic/sanitize';
 
-// Base
+/* Base */
 @import
   'base/config',
   'base/global',
   'base/typography';
 
-// Objects - Objects and Design Patterns
+/* Objects - Objects and Design Patterns */
 @import
   'objects/colors-classes',
   'objects/images',
   'objects/svg';
 
-// Animations
+/* Animations */
 @import
   "animations/bouncing";
 
-// Import layouts
+/* Import layouts */
 @import
   'layouts/grid',
   'layouts/main';
 
-// Components - Complete Chunks of UI
+/* Components - Complete Chunks of UI */
 @import
   'components/header',
   'components/footer';
 
-// Import pages
+/* Import pages */
 @import
   'pages/about',
   'pages/contact',
   'pages/home';
 
-// Overrides - High specificity classes, overrides and helper classes
+/* Overrides - High specificity classes, overrides and helper classes */
 @import
   'overrides/helper-float',
   'overrides/helper-margin',
