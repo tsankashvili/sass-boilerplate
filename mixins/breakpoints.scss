@@ -26,7 +26,7 @@
   $map: breakpoints-map();
 
   @if(contains(min-width max-width min-height max-height,$first) and map-has-key($map,$last)){
-    $query: nth($query,1) + ' ' +map-get($map,nth($query,2));
+    $query: nth($query,1) map-get($map,nth($query,2));
   }
   @else if($first == "range"){
     $min-width: 0; $extra-px: 0; $part: 0; $break: false;
@@ -58,7 +58,7 @@
 }
 
 @mixin breakpoints($keys, $no-query: false){
-  @include breakpoint($query, $no-query){
+  @include breakpoint($keys, $no-query){
     @content;
   }
 }
