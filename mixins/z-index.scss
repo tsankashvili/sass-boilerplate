@@ -1,0 +1,18 @@
+//
+// Helper to get z-index value from `$z-index-map` map
+/// @group Main
+/// @param {Arglist} $key - key from $z-index-map layers map
+/// @return {Number} - z-index value
+/// @require {variable} $z-index-map - names layers map
+/// @require {function} z-index
+/// @alias z {mixin}
+/// @example @include z-index(cap,second-cap) @return {Number} // 2
+//
+
+@mixin z-index($keys) {
+  z-index: z-index($keys);
+}
+
+@mixin z($keys) {
+  z-index: z-index($keys);
+}
