@@ -8,6 +8,7 @@
 ///
 /// @param {Number (with unit) | string | null} $width [null] - Element width
 /// @param {Number (with unit) | string | null} $height [null] - Element height
+/// @param {String} $position - Either `relative`, `absolute` or `fixed`
 /// @example @include center - with-unknown-dimensions
 /// @example @include center(400px) - with-known-width
 /// @example @include center($height: 400px) - with-known-height
@@ -17,8 +18,8 @@
 /// @link https://css-tricks.com/centering-css-complete-guide
 //
 
-@mixin center($width: null, $height: null) {
-  position: absolute;
+@mixin center($width: null, $height: null,$position: absolute) {
+  position: $pos;
   top: 50%;
   left: 50%;
 
