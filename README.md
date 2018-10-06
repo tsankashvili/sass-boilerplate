@@ -30,7 +30,7 @@ mixins can be added by creating new files. Since mixins don't output any code un
 - - - -
 
 ### Generic - [/generic](https://github.com/tsankashvili/sass-boilerplate/tree/master/generic)
-reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+reset and/or normalize styles etc. This is the first layer which generates actual CSS.
 
 - - - -
 
