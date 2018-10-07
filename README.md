@@ -81,10 +81,10 @@ The app.scss file is where the entire project is stitched together. Consisting o
 ## SASS libraries, files and folders structures
 Thank you very much. I learned a lot from them and I agree in many ways:
 
-- <a href="https://www.bourbon.io/" target="_blank">Bourbon</a> - pure Sass mixins and functions,
-- <a href="http://compass-style.org/" target="_blank">Compass</a> - CSS Authoring Framework,
-- <a href="https://sass-guidelin.es/" target="_blank">Hugo Giraudel</a> - Sass Guidelines,
-- <a href="https://hugogiraudel.com/" target="_blank">Hugo Giraudel</a> - Hugo Giraudel's blog,
-- <a href="https://github.com/BetterBrandAgency/betterboilerplate" target="_blank">BetterBoilerplate</a> - A frontend framework,
-- <a href="https://css-tricks.com/" target="_blank">css-tricks</a> - Tips, Tricks, and Techniques on using css,
-- <a href="http://breakpoint-sass.com/" target="_blank">breakpoint-sass</a> - Breakpoint makes writing media queries in Sass super simple.
+- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions,
+- [Compass](http://compass-style.org/) - CSS Authoring Framework,
+- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines,
+- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog,
+- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework,
+- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css,
+- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple.
