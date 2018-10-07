@@ -77,4 +77,14 @@ And last you will probably have a vendors/ folder containing all the CSS files f
 ### app.scss - [app.scss](https://github.com/tsankashvili/sass-boilerplate/tree/master/app.scss)
 The app.scss file is where the entire project is stitched together. Consisting only of @import rules it is responsible for the order in which the code is output into the single main stylesheet when compiled.
 
-- - - -
+
+## sass libraries, files and folders structures
+Thank you very much. I learned a lot from them and I agree in many ways:
+
+- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions,
+- [Compass](http://compass-style.org/) - CSS Authoring Framework,
+- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines,
+- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog,
+- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework,
+- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css,
+- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple.
