@@ -5,13 +5,10 @@
   outline: 0;
   box-shadow:none;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
   &:after,&:before{
     box-sizing: border-box;
   }
-}
-html{
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
 }
 input, button{
   border:none;
