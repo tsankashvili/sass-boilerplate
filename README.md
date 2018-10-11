@@ -215,8 +215,15 @@ The overrides layer contains the helper classes broken down into multiple files 
 
 - - - -
 
-### Vendors - [/validators](/vendors)
+### Vendors - [/Vendors](/vendors)
 And last you will probably have a vendors/ folder containing all the CSS files from external libraries and frameworks
+
+<details>
+  <summary>View files</summary>
+
+  * [`_breakpoint.scss`](/vendors/breakpoint-sass/_breakpoint.scss)
+
+</details>
 
 - - - -
 
