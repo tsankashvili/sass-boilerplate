@@ -18,9 +18,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     ├── components                
     ├── pages                   
     ├── overrides               
-    ├── vendors                
-    
-    
+    ├── vendors               
 
 - - - -
 
