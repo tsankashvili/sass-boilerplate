@@ -3,8 +3,24 @@ My Sass experience
 
 - - - -
 
-### File Structure
+### Directory and file structure
 The boilerplate contains the entire directory structure needed for a frontend project and can be easily integrated into any project type.
+
+    ├── settings                   
+    ├── validators                 
+    ├── functions                  
+    ├── mixins                    
+    ├── generic                   
+    ├── base                   
+    ├── objects                
+    ├── animations                
+    ├── layouts                   
+    ├── components                
+    ├── pages                   
+    ├── overrides               
+    ├── vendors                
+    
+    
 
 - - - -
 
