@@ -6,19 +6,96 @@ My Sass experience
 ### Directory and file structure
 The boilerplate contains the entire directory structure needed for a frontend project and can be easily integrated into any project type.
 
-    ├── settings                   
-    ├── validators                 
-    ├── functions                  
-    ├── mixins                    
-    ├── generic                   
-    ├── base                   
-    ├── objects                
-    ├── animations                
-    ├── layouts                   
-    ├── components                
-    ├── pages                   
-    ├── overrides               
-    ├── vendors               
+
+    ├── settings
+    │   ├── base-options.scss
+    │   ├── fonts-text.scss
+    │   ├── colors.scss
+    │   ├── modules-widgets.scss
+    │   ├── global-properties.scss
+    │   ├── breakpoints.scss
+    │   ├── animations.scss
+    │   ├── easings.scss
+    │   ├── transitions.scss
+    │   └── z-index.scss
+    ├── validators
+    │   ├── contains.scss
+    │   ├── is-length.scss
+    │   ├── is-color.scss
+    │   └── is-size.scss
+    ├── functions
+    │   ├── sh-setup.scss
+    │   ├── math.scss
+    │   ├── map-functions.scss
+    │   ├── list-functions.scss
+    │   ├── unitconversion.scss
+    │   ├── to-number.scss
+    │   ├── string-replace.scss
+    │   ├── strip-unit.scss
+    │   ├── breakpoints-map.scss
+    │   ├── animations.scss
+    │   ├── easings.scss
+    │   ├── color.scss
+    │   ├── tint.scss
+    │   ├── shade.scss
+    │   └── z-index.scss
+    ├── mixins
+    │   ├── border-radius.scss
+    │   ├── breakpoints.scss
+    │   ├── centering.scss
+    │   ├── circle.scss
+    │   ├── clearfix.scss
+    │   ├── fonts.scss
+    │   ├── hide.scss
+    │   ├── strip-unit.scss
+    │   ├── line-clamp.scss
+    │   ├── nth-child.scss
+    │   ├── placeholder.scss
+    │   ├── position.scss
+    │   ├── pseudo.scss
+    │   ├── resize.scss
+    │   ├── scrollbars.scss
+    │   ├── selection.scss
+    │   ├── size.scss
+    │   ├── text-crop.scss
+    │   ├── triangle.scss
+    │   ├── visually-hidden.scss
+    │   └── z-index.scss
+    ├── generic
+    │   ├── reset.scss
+    │   └── sanitize.scss
+    ├── base
+    │   ├── config.scss
+    │   ├── global.scss
+    │   └── typography.scss
+    ├── objects
+    │   ├── colors-classes.scss
+    │   ├── images.scss
+    │   └── svg.scss
+    ├── animations
+    │   └── bouncing.scss
+    ├── layouts
+    │   ├── grid.scss
+    │   └── main.scss
+    ├── components
+    │   ├── header.scss
+    │   └── footer.scss
+    ├── pages
+    │   ├── about.scss
+    │   ├── contact.scss
+    │   └── home.scss
+    ├── overrides
+    │   ├── helper-float.scss
+    │   ├── helper-margin.scss
+    │   ├── helper-padding.scss
+    │   ├── helper-position.scss
+    │   ├── helper-text.scss
+    │   ├── helper-visibility.scss
+    │   └── shame.scss
+    ├── vendors
+    │   └── breakpoint-sass
+    │       └── _breakpoint.scss
+    └── app.scss 
 
 - - - -
 
