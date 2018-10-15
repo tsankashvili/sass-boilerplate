@@ -110,7 +110,7 @@ This layer contains all of the variables needed to turn settings on and off as w
   * [`colors.scss`](/settings/colors.scss)
   * [`modules-widgets.scss`](/settings/modules-widgets.scss)
   * [`global-properties.scss`](/settings/global-properties.scss)
-  * [`breakpoints.scss`](/settings/breakpoints)
+  * [`breakpoints.scss`](/settings/breakpoints.scss)
   * [`animations.scss`](/settings/animations.scss)
   * [`easings.scss`](/settings/easings.scss)
   * [`transitions.scss`](/settings/transitions.scss)
