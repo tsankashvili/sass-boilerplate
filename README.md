@@ -254,7 +254,7 @@ The layout/ directory (sometimes called partials/) usually contains a number of 
   <summary>View files</summary>
 
 
-  * [`bouncing.scss`](/layouts/grid.scss)
+  * [`grid.scss`](/layouts/grid.scss)
   * [`main.scss`](/layouts/main.scss)
 
 </details>
