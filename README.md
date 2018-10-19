@@ -325,13 +325,13 @@ The app.scss file is where the entire project is stitched together. Consisting o
 ## Sass libraries, files and folders structures
 Thank you very much. I learned a lot from them and I agree in many ways:
 
-- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions,
-- [Compass](http://compass-style.org/) - CSS Authoring Framework,
-- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines,
-- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog,
-- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework,
-- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css,
-- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple.
+- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions
+- [Compass](http://compass-style.org/) - CSS Authoring Framework
+- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines
+- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog
+- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework
+- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css
+- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple
 
 ## Other awesome resources
 - [jump start sass](https://www.goodreads.com/book/show/26598681-jump-start-sass) - Book by Hugo Giraudel and Miriam Suzanne
