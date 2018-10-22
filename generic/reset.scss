@@ -6,6 +6,9 @@
   box-shadow:none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  @if(not $use-font-variant-ligatures){
+    font-variant-ligatures: none;
+  }
   &:after,&:before{
     box-sizing: border-box;
   }
