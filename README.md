@@ -3,8 +3,99 @@ My Sass experience
 
 - - - -
 
-### File Structure
+### Directory and file structure
 The boilerplate contains the entire directory structure needed for a frontend project and can be easily integrated into any project type.
+
+
+    ├── settings
+    │   ├── base-options.scss
+    │   ├── fonts-text.scss
+    │   ├── colors.scss
+    │   ├── modules-widgets.scss
+    │   ├── global-properties.scss
+    │   ├── breakpoints.scss
+    │   ├── animations.scss
+    │   ├── easings.scss
+    │   ├── transitions.scss
+    │   └── z-index.scss
+    ├── validators
+    │   ├── contains.scss
+    │   ├── is-length.scss
+    │   ├── is-color.scss
+    │   └── is-size.scss
+    ├── functions
+    │   ├── sh-setup.scss
+    │   ├── math.scss
+    │   ├── map-functions.scss
+    │   ├── list-functions.scss
+    │   ├── unitconversion.scss
+    │   ├── to-number.scss
+    │   ├── string-replace.scss
+    │   ├── strip-unit.scss
+    │   ├── breakpoints-map.scss
+    │   ├── animations.scss
+    │   ├── easings.scss
+    │   ├── color.scss
+    │   ├── tint.scss
+    │   ├── shade.scss
+    │   └── z-index.scss
+    ├── mixins
+    │   ├── border-radius.scss
+    │   ├── breakpoints.scss
+    │   ├── centering.scss
+    │   ├── circle.scss
+    │   ├── clearfix.scss
+    │   ├── fonts.scss
+    │   ├── hide.scss
+    │   ├── strip-unit.scss
+    │   ├── line-clamp.scss
+    │   ├── nth-child.scss
+    │   ├── placeholder.scss
+    │   ├── position.scss
+    │   ├── pseudo.scss
+    │   ├── resize.scss
+    │   ├── scrollbars.scss
+    │   ├── selection.scss
+    │   ├── size.scss
+    │   ├── text-crop.scss
+    │   ├── triangle.scss
+    │   ├── visually-hidden.scss
+    │   └── z-index.scss
+    ├── generic
+    │   ├── reset.scss
+    │   └── sanitize.scss
+    ├── base
+    │   ├── config.scss
+    │   ├── global.scss
+    │   └── typography.scss
+    ├── objects
+    │   ├── colors-classes.scss
+    │   ├── images.scss
+    │   └── svg.scss
+    ├── animations
+    │   └── bouncing.scss
+    ├── layouts
+    │   ├── grid.scss
+    │   └── main.scss
+    ├── components
+    │   ├── header.scss
+    │   └── footer.scss
+    ├── pages
+    │   ├── about.scss
+    │   ├── contact.scss
+    │   └── home.scss
+    ├── overrides
+    │   ├── helper-float.scss
+    │   ├── helper-margin.scss
+    │   ├── helper-padding.scss
+    │   ├── helper-position.scss
+    │   ├── helper-text.scss
+    │   ├── helper-visibility.scss
+    │   └── shame.scss
+    ├── vendors
+    │   └── breakpoint-sass
+    │       └── _breakpoint.scss
+    └── app.scss 
 
 - - - -
 
@@ -19,7 +110,7 @@ This layer contains all of the variables needed to turn settings on and off as w
   * [`colors.scss`](/settings/colors.scss)
   * [`modules-widgets.scss`](/settings/modules-widgets.scss)
   * [`global-properties.scss`](/settings/global-properties.scss)
-  * [`breakpoints.scss`](/settings/breakpoints)
+  * [`breakpoints.scss`](/settings/breakpoints.scss)
   * [`animations.scss`](/settings/animations.scss)
   * [`easings.scss`](/settings/easings.scss)
   * [`transitions.scss`](/settings/transitions.scss)
@@ -163,7 +254,7 @@ The layout/ directory (sometimes called partials/) usually contains a number of 
   <summary>View files</summary>
 
 
-  * [`bouncing.scss`](/layouts/grid.scss)
+  * [`grid.scss`](/layouts/grid.scss)
   * [`main.scss`](/layouts/main.scss)
 
 </details>
@@ -234,10 +325,13 @@ The app.scss file is where the entire project is stitched together. Consisting o
 ## Sass libraries, files and folders structures
 Thank you very much. I learned a lot from them and I agree in many ways:
 
-- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions,
-- [Compass](http://compass-style.org/) - CSS Authoring Framework,
-- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines,
-- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog,
-- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework,
-- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css,
-- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple.
+- [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions
+- [Compass](http://compass-style.org/) - CSS Authoring Framework
+- [Hugo Giraudel](https://sass-guidelin.es/) - Sass Guidelines
+- [Hugo Giraudel](https://hugogiraudel.com/) - Hugo Giraudel's blog
+- [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework
+- [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css
+- [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple
+
+## Other awesome resources
+- [jump start sass](https://www.goodreads.com/book/show/26598681-jump-start-sass) - Book by Hugo Giraudel and Miriam Suzanne
