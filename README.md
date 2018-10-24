@@ -335,3 +335,4 @@ Thank you very much. I learned a lot from them and I agree in many ways:
 
 ## Other awesome resources
 - [jump start sass](https://www.goodreads.com/book/show/26598681-jump-start-sass) - Book by Hugo Giraudel and Miriam Suzanne
+- [Sassisfaction](https://sassisfaction.com/) - Awesome Sass Resources
