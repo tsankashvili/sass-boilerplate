@@ -64,7 +64,8 @@
   'mixins/visually-hidden',
   'mixins/z-index',
   'mixins/context',
-  'mixins/parentState';
+  'mixins/parentState',
+  'mixins/parent-hover';
 
 /* Import Generic - Low Specificity, far reaching styles eg. resets */
 @import

@@ -1,0 +1,15 @@
+//
+// Parent Hover
+/// @group Main
+/// @link https://www.sassmeister.com/gist/5ede2ad94b87929db8fe
+//
+@mixin parent-hover() {
+  $selector: &;
+  @each $list in & {
+    $parent: nth($list,length($list)-1);
+    $selector: selector-replace($selector,$parent,$parent+':hover');
+  }
+  @at-root #{$selector} {
+    @content;
+  }
+ }
