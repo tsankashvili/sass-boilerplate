@@ -59,8 +59,10 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── size.scss
     │   ├── text-crop.scss
     │   ├── triangle.scss
-    │   ├── visually-hidden.scss
-    │   └── z-index.scss
+    │   ├── z-index.scss
+    │   ├── context.scss
+    │   ├── parentState.scss
+    │   └── parent-hover.scss
     ├── generic
     │   ├── reset.scss
     │   └── sanitize.scss
@@ -95,7 +97,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     ├── vendors
     │   └── breakpoint-sass
     │       └── _breakpoint.scss
-    └── app.scss 
+    └── app.scss
 
 - - - -
 
@@ -189,6 +191,9 @@ mixins can be added by creating new files. Since mixins don't output any code un
   * [`triangle.scss`](/mixins/triangle.scss)
   * [`visually-hidden.scss`](/mixins/visually-hidden.scss)
   * [`z-index.scss`](/mixins/z-index.scss)
+  * [`context.scss`](/mixins/context.scss)
+  * [`parentState.scss`](/mixins/parentState.scss)
+  * [`parent-hover.scss`](/mixins/parent-hover.scss)
 
 </details>
 
