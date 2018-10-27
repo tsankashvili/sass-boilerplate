@@ -62,7 +62,8 @@
   'mixins/text-crop',
   'mixins/triangle',
   'mixins/visually-hidden',
-  'mixins/z-index';
+  'mixins/z-index',
+  'mixins/context';
 
 /* Import Generic - Low Specificity, far reaching styles eg. resets */
 @import
