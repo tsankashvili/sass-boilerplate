@@ -1,12 +1,10 @@
-//
-// Set `width` and `height` in a single statement.
-/// @argument {Number (with unit) | string} $width
-/// @argument {Number (with unit) | string} $height [$width]
-/// @output `width` and `height`.
+/// Sizing mixin from width and height
+/// If height is omitted, same as width
+/// @param {Length} $width - element width
+/// @param {Length} $height [$width] - element height
 /// @requires {function} is-length
 /// @link https://www.bourbon.io/docs/5.0.1/#size
 /// @link https://www.sitepoint.com/bulletproof-function-validate-length-values-sass
-//
 
 @mixin size($width, $height: $width) {
   @if is-length($width) {
