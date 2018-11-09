@@ -38,3 +38,8 @@ a:focus,a:active{
   min-height: 100vh;
   width: 100%;
 }
+.is-mobile{
+  *:hover{
+    all: inherit;
+  }
+}
