@@ -16,6 +16,22 @@
 ///              @media (min-width: 1920px) { body { font-size: 52px; }  }
 //
 
+
+//
+/// @group Fonts
+/// @access private
+//
+@mixin font-lang($lang: null){
+  @if($lang){
+    html[lnag="#{$lang}"] &{
+      @content;
+    }
+  }
+  @else{
+    @content;
+  }
+}
+
 @mixin fonts($fonts){
   $fonts: str-to-list(inspect($fonts));
   $first: nth($fonts,1);
