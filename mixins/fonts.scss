@@ -23,7 +23,7 @@
 //
 @mixin font-lang($lang: null){
   @if($lang){
-    html[lnag="#{$lang}"] &{
+    html[lang="#{$lang}"] &{
       @content;
     }
   }
