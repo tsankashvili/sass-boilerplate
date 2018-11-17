@@ -337,8 +337,8 @@ Thank you very much. I learned a lot from them and I agree in many ways:
 - [BetterBoilerplate](https://github.com/BetterBrandAgency/betterboilerplate) - A frontend framework
 - [css-tricks](https://css-tricks.com/) - Tips, Tricks, and Techniques on using css
 - [breakpoint-sass](http://breakpoint-sass.com/) - Breakpoint makes writing media queries in Sass super simple
-- [Order CSS properties](https://9elements.com/css-rule-order/) - The most popular way to order CSS properties is grouped by type.
 
 ## Other awesome resources
 - [jump start sass](https://www.goodreads.com/book/show/26598681-jump-start-sass) - Book by Hugo Giraudel and Miriam Suzanne
 - [Sassisfaction](https://sassisfaction.com/) - Awesome Sass Resources
+- [Order CSS properties](https://9elements.com/css-rule-order/) - The most popular way to order CSS properties is grouped by type.
