@@ -341,4 +341,5 @@ Thank you very much. I learned a lot from them and I agree in many ways:
 ## Other awesome resources
 - [jump start sass](https://www.goodreads.com/book/show/26598681-jump-start-sass) - Book by Hugo Giraudel and Miriam Suzanne
 - [Sassisfaction](https://sassisfaction.com/) - Awesome Sass Resources
+- [sass-resources](https://cssauthor.com/sass-resources/) - The Ultimate SASS Resources & Tools
 - [Order CSS properties](https://9elements.com/css-rule-order/) - The most popular way to order CSS properties is grouped by type.
