@@ -98,6 +98,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   └── breakpoint-sass
     │       └── _breakpoint.scss
     └── app.scss
+    └── style.scss
 
 - - - -
 
@@ -324,8 +325,10 @@ And last you will probably have a vendors/ folder containing all the CSS files f
 - - - -
 
 ### app.scss - [app.scss](/app.scss)
-The app.scss file is where the entire project is stitched together. Consisting only of @import rules it is responsible for the order in which the code is output into the single main stylesheet when compiled.
+The app.scss file is where the entire project is stitched together. Consisting only of @import rules. only variables,functions,mixins of scss  - not compile to css
 
+### style.scss - [style.scss](/style.scss)
+The style.scss file is where the entire project is stitched together. Consisting only of @import rules it is responsible for the order in which the code is output into the single main stylesheet when compiled.
 
 ## Sass libraries, files and folders structures
 Thank you very much. I learned a lot from them and I agree in many ways:
