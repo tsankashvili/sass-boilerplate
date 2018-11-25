@@ -9,19 +9,19 @@
 
 @mixin autofill($background: #0074D9, $color: #fff){
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $background inset;
+    -webkit-box-shadow: 0 0 0px 1000px $background inset !important;
     -webkit-text-fill-color: $color !important;
   }
   &:-moz-autofill {
     -moz-text-fill-color: $color !important;
-    -moz-box-shadow: 0 0 0px 1000px $background inset;
+    -moz-box-shadow: 0 0 0px 1000px $background inset !important;
   }
   &:-o-autofill {
     -o-text-fill-color: $color !important;
-    -o-box-shadow: 0 0 0px 1000px $background inset;
+    -o-box-shadow: 0 0 0px 1000px $background inset !important;
   }
   &:-khtml-autofill {
     -khtml-text-fill-color: $color !important;
-    -khtml-box-shadow: 0 0 0px 1000px $background inset;
+    -khtml-box-shadow: 0 0 0px 1000px $background inset !important;
   }
 }
