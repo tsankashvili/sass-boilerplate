@@ -330,6 +330,19 @@ The app.scss file is where the entire project is stitched together. Consisting o
 ### style.scss - [style.scss](/style.scss)
 The style.scss file is where the entire project is stitched together. Consisting only of @import rules it is responsible for the order in which the code is output into the single main stylesheet when compiled.
 
+
+### Don’t follow rules
+I tried to give you some guidelines based on my own experience.
+
+I doesn’t mean everything will work for you, so my best advice is :
+1. Try to improve your naming
+2. keep it consistent for a given project
+3. but avoid over-engineering
+
+__If you don’t feel comfortable, just skip it.__
+
+__Enjoy!__ 🍒
+
 ## Sass libraries, files and folders structures
 Thank you very much. I learned a lot from them and I agree in many ways:
 
