@@ -13,7 +13,6 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── colors.scss
     │   ├── modules-widgets.scss
     │   ├── global-properties.scss
-    │   ├── breakpoints.scss
     │   ├── animations.scss
     │   ├── easings.scss
     │   ├── transitions.scss
@@ -32,7 +31,6 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── to-number.scss
     │   ├── string-replace.scss
     │   ├── strip-unit.scss
-    │   ├── breakpoints-map.scss
     │   ├── animations.scss
     │   ├── easings.scss
     │   ├── color.scss
@@ -41,7 +39,6 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   └── z-index.scss
     ├── mixins
     │   ├── border-radius.scss
-    │   ├── breakpoints.scss
     │   ├── centering.scss
     │   ├── circle.scss
     │   ├── clearfix.scss
@@ -113,7 +110,6 @@ This layer contains all of the variables needed to turn settings on and off as w
   * [`colors.scss`](/settings/colors.scss)
   * [`modules-widgets.scss`](/settings/modules-widgets.scss)
   * [`global-properties.scss`](/settings/global-properties.scss)
-  * [`breakpoints.scss`](/settings/breakpoints.scss)
   * [`animations.scss`](/settings/animations.scss)
   * [`easings.scss`](/settings/easings.scss)
   * [`transitions.scss`](/settings/transitions.scss)
@@ -152,7 +148,6 @@ Many useful functions for manipulating colors and other values.The functions lay
   * [`to-number.scss`](/functions/to-number.scss)
   * [`string-replace.scss`](/functions/string-replace.scss)
   * [`strip-unit.scss`](/functions/strip-unit.scss)
-  * [`breakpoints-map.scss`](/functions/breakpoints-map.scss)
   * [`animations.scss`](/functions/animations.scss)
   * [`easings.scss`](/functions/easings.scss)
   * [`color.scss`](/functions/color.scss)
@@ -165,14 +160,13 @@ Many useful functions for manipulating colors and other values.The functions lay
 - - - -
 
 ### Mixins - [/mixins](/mixins)
-Many useful mixins for manipulating breakpoints and other values,
+Many useful mixins for manipulating fonts and other values,
 mixins can be added by creating new files. Since mixins don't output any code until they're used there is no harm in them being there and not being utilised.
 
 <details>
   <summary>View files</summary>
 
   * [`border-radius.scss`](/mixins/border-radius.scss)
-  * [`breakpoints.scss`](/mixins/breakpoints.scss)
   * [`centering.scss`](/mixins/centering.scss)
   * [`circle.scss`](/mixins/circle.scss)
   * [`clearfix.scss`](/mixins/clearfix.scss)

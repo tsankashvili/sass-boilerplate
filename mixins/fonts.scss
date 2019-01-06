@@ -1,70 +1,27 @@
 //
-// responsive font mixin
 /// @group Fonts
 /// @access public
-/// @require {Map} $breakpoints-map
-/// @require {function} breakpoints-map  - one deep $breakpoints-map
-/// @require {function} remove - Remove value(s) $value from $list
-/// @require {function} str-to-list - Remove value(s) $value from $list
-/// @require {function} map-has-key - Test if map got all `$keys` at first level
-/// @param {string} $fonts
-/// @content [Write the style you want to apply to the font, and it will be added within the @content directive]
-/// @example body{ @include fonts('bpg-nino-mtavruli' small-xs 38px huge 52px) }
+/// @param {string} $lang-code
+/// @param {string} $font-family
+/// @param {string} $font-size
+/// @example body{ @include fonts('ka','bpg-nino-mtavruli',18px) }
 ///      @return
-///              body {font-family:'bpg-nino-mtavruli; @content }
-///              @media (min-width: 768px) and (max-width: 1919px) { body { font-size: 38px; }  }
-///              @media (min-width: 1920px) { body { font-size: 52px; }  }
+///              html[lang="ka"]{ body{ font-family: 'bpg-nino-mtavruli; font-size: 18px;} }
 //
-
-
-//
-/// @group Fonts
-/// @access private
-//
-@mixin font-lang($lang: null){
-  @if($lang){
-    html[lang="#{$lang}"] &{
-      @content;
-    }
-  }
-  @else{
-    @content;
-  }
-}
-
-@mixin fonts($fonts){
-  $fonts: str-to-list(inspect($fonts));
-  $first: nth($fonts,1);
-  $map: breakpoints-map();
-  $min-width: '';
-
-  @if(not map-has-key($map,$first)){
-    font-family: $first;
-
-    $fonts: remove($fonts,$first);
-  }
-
-  @for $i from 1 through length($fonts){
-    $value: nth($fonts,$i);
-
-    @if($i%2==0){
-      @if(length($fonts) > $i + 1){
-        $max-width: map-get($map,nth($fonts,$i + 1));
-
-        @media (min-width: $min-width) and (max-width: $max-width - 1px){
-          font-size: $value;
-        }
+@mixin fonts($lang-code: null, $font-family: null, $font-size: null){
+  $lang-list: "ka","en";
+  @if(contains($lang-list,$lang-code)){
+    html[lang="#{$lang-code}"] &{
+      @if(not is-number($font-family)){
+        font-family: $font-family;
       }
-      @else{
-        @media (min-width: $min-width){
-          font-size: $value;
+
+      @if(is-number($font-family) or $font-size != null){
+        @if($font-size == null){
+          $font-size: $font-family;
         }
+        font-size: $font-size;
       }
     }
-    @else{
-      $min-width: map-get($map,$value);
-    }
   }
-
-  @content;
 }

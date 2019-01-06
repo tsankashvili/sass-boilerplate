@@ -1,8 +1,6 @@
 //////////////////////////////
 // Default Variables
 //////////////////////////////
-/// @link http://breakpoint-sass.com
-
 $Breakpoint-Settings: (
   'default media': all,
   'default feature': min-width,
@@ -39,9 +37,7 @@ $breakpoint: () !default;
 // Breakpoint Mixin
 //////////////////////////////
 
-// rename mixin 'breakpoint' to 'mq' by tsankashvili
-
-@mixin mq($query, $no-query: false) {
+@mixin breakpoint($query, $no-query: false) {
   @include legacy-settings-warning;
 
   // Reset contexts
@@ -108,4 +104,11 @@ $breakpoint: () !default;
   }
 
   @include private-breakpoint-reset-contexts();
+}
+
+
+@mixin mq($query, $no-query: false) {
+  @include breakpoint($query, $no-query) {
+    @content;
+  }
 }
