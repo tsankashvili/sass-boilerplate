@@ -1,0 +1,21 @@
+//
+/// @group Main
+/// @param {Number (with unit) | string} $size - width and height
+/// @content [Write the style you want to apply to the circle, and it will be added within the @content directive]
+//
+
+@mixin min-max-width($size,$width: false) {
+  min-width : $size;
+  max-width : $size;
+  @if($width){
+    width: $size;
+  }
+}
+
+@mixin min-max-height($size,$height: false) {
+  min-height : $size;
+  max-height : $size;
+  @if($height){
+    height: $size;
+  }
+}
