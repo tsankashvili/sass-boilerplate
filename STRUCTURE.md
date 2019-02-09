@@ -54,7 +54,8 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── z-index.scss
     │   ├── context.scss
     │   ├── parentState.scss
-    │   └── parent-hover.scss
+    │   ├── parent-hover.scss
+    │   └── transitions.scss
     ├── generic
     │   ├── reset.scss
     │   └── sanitize.scss
@@ -184,6 +185,7 @@ mixins can be added by creating new files. Since mixins don't output any code un
   * [`context.scss`](/mixins/context.scss)
   * [`parentState.scss`](/mixins/parentState.scss)
   * [`parent-hover.scss`](/mixins/parent-hover.scss)
+  * [`transitions.scss`](/mixins/transitions.scss)
 
 </details>
 

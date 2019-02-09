@@ -1,0 +1,14 @@
+//
+/// Default transitions
+/// @group Selectors
+/// @param {Value} $args - Multiple arguments
+/// default variables
+/// @see /settings/transitions
+/// @example @include default-transition(color,background-color);
+//
+
+@mixin default-transitions($args...) {
+  transition-property: $args;
+  transition-duration: $default-timing-speed;
+  transition-timing-function: $default-timing-func;
+}
