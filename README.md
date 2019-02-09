@@ -4,7 +4,7 @@ My Sass experience
 - - - -
 
 ### Documentation
-[Directory and file structure](/STRUCTURE.md)
+[Directories and files structure](/STRUCTURE.md)
 
 ### Don’t follow rules
 I tried to give you some guidelines based on my own experience.
