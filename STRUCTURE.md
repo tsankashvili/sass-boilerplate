@@ -1,4 +1,4 @@
-### Directory and file structure
+### Directories and files structure
 The boilerplate contains the entire directory structure needed for a frontend project and can be easily integrated into any project type.
 
 
