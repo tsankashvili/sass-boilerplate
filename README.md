@@ -18,7 +18,7 @@ __If you don’t feel comfortable, just skip it.__
 
 __Enjoy!__ 🍒
 
-## Sass libraries, files and folders structures
+## Sass libraries
 Thank you very much. I learned a lot from them and I agree in many ways:
 
 - [Bourbon](https://www.bourbon.io/) - pure Sass mixins and functions
