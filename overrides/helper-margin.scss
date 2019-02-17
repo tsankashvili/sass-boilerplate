@@ -1,38 +1,39 @@
 //
 // Margin Helper Classes
 /// @require {Boolean} $use-helper-margin-styles - base variable in Settings
+/// @see  /Settings/base-options.scss - All base options - All base options
 //
 
 @if $use-helper-margin-styles == true {
 
-    .no-margin {
-        margin: 0;
+  .no-margin {
+    margin: 0;
 
-        &--top {
-            margin-top: 0;
-        }
-
-        &--right {
-            margin-right: 0;
-        }
-
-        &--bottom {
-            margin-bottom: 0;
-        }
-
-        &--left {
-            margin-left: 0;
-        }
-
-        &--sides {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        &--ends {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
+    &--top {
+      margin-top: 0;
     }
+
+    &--right {
+      margin-right: 0;
+    }
+
+    &--bottom {
+      margin-bottom: 0;
+    }
+
+    &--left {
+      margin-left: 0;
+    }
+
+    &--sides {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &--ends {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+  }
 }

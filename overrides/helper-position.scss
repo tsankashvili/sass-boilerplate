@@ -1,28 +1,29 @@
 //
 // Position Helper Classes
 /// @require {Boolean} $use-helper-position-styles - base variable in Settings
+/// @see  /Settings/base-options.scss - All base options
 //
 
 @if $use-helper-position-styles == true {
 
-    .position {
+  .position {
 
-        &--relative {
-            position: relative;
-        }
-
-        &--absolute {
-            position: absolute;
-        }
-
-        &--static {
-            position: static;
-        }
-
-        &--fixed {
-            position: fixed;
-        }
-
+    &--relative {
+      position: relative;
     }
+
+    &--absolute {
+      position: absolute;
+    }
+
+    &--static {
+      position: static;
+    }
+
+    &--fixed {
+      position: fixed;
+    }
+
+  }
 
 }

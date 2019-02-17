@@ -1,8 +1,8 @@
 //
 // HTML Validator
 // Visually identify potential problems
-// See Base Variables
-/// @see  /Settings/base-options.scss
+/// @require {Boolean} $use-html-validator - base variable in Settings
+/// @see  /Settings/base-options.scss - All base options
 //
 
 @if $use-html-validator == true {

@@ -1,20 +1,21 @@
 //
 // Visibility Helper Classes
 /// @require {Boolean} $use-helper-visibility-styles - base variable in Settings
+/// @see  /Settings/base-options.scss - All base options - Base Options
 //
 
 @if $use-helper-visibility-styles == true {
 
-    .is-hidden {
-        display: none;
-    }
+  .is-hidden {
+    display: none;
+  }
 
-    .is-visible {
-        display: block;
-    }
+  .is-visible {
+    display: block;
+  }
 
-    /// @require {mixin} visually-hidden
-    .visually-hidden {
-      @include visually-hidden;
-    }
+  /// @require {mixin} visually-hidden
+  .visually-hidden {
+    @include visually-hidden;
+  }
 }
