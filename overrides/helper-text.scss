@@ -1,68 +1,69 @@
 //
 // Text Helper Classes
 /// @require {Boolean} $use-helper-text-styles - base variable in Settings
+// See Variables
+/// @see  /Settings/base-options.scss
 //
 
 @if $use-helper-text-styles == true {
 
-    .text {
+  .text {
 
-        &--left {
-            text-align: left;
-        }
-
-        &--center {
-            text-align: center;
-        }
-
-        &--right {
-            text-align: right;
-        }
-
-        &--just {
-            text-align: justify;
-        }
-
-        &--capitalized {
-            text-transform: capitalize;
-        }
-
-        &--small-caps {
-            font-variant-caps: small-caps;
-            font-feature-settings: "smcp";
-        }
-
-        &--uppercase {
-            text-transform: uppercase;
-        }
-
-        &--regular {
-            font-weight: 400;
-        }
-
-        &--semi-bold {
-            font-weight: 600;
-        }
-
-        &--bold {
-            font-weight: bold;
-        }
-
+    &--left {
+      text-align: left;
     }
 
-    .align {
-
-        &--top{
-          vertical-align: top;
-        }
-
-        &--middle{
-          vertical-align: top;
-        }
-
-        &--bottom{
-          vertical-align: top;
-        }
+    &--center {
+      text-align: center;
     }
+
+    &--right {
+      text-align: right;
+    }
+
+    &--just {
+      text-align: justify;
+    }
+
+    &--capitalized {
+      text-transform: capitalize;
+    }
+
+    &--small-caps {
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+    &--regular {
+      font-weight: 400;
+    }
+
+    &--semi-bold {
+      font-weight: 600;
+    }
+
+    &--bold {
+      font-weight: bold;
+    }
+
+  }
+
+  .align {
+    &--top{
+      vertical-align: top;
+    }
+
+    &--middle{
+      vertical-align: top;
+    }
+
+    &--bottom{
+      vertical-align: top;
+    }
+  }
 
 }

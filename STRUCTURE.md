@@ -86,6 +86,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── helper-position.scss
     │   ├── helper-text.scss
     │   ├── helper-visibility.scss
+    │   ├── html-validator.scss
     │   └── shame.scss
     ├── vendors
     │   └── breakpoint-sass
@@ -107,7 +108,7 @@ This layer contains all of the variables needed to turn settings on and off as w
   * [`easings.scss`](/settings/easings.scss)
   * [`transitions.scss`](/settings/transitions.scss)
   * [`z-index.scss`](/settings/z-index.scss)
-  
+
 - - - -
 
 ### Validators - [/validators](/validators)
@@ -209,7 +210,7 @@ The layout/ directory (sometimes called partials/) usually contains a number of 
 
   * [`grid.scss`](/layouts/grid.scss)
   * [`main.scss`](/layouts/main.scss)
-  
+
 - - - -
 
 ### Components - [/components](/components)
@@ -238,6 +239,7 @@ The overrides layer contains the helper classes broken down into multiple files 
   * [`helper-position.scss`](/overrides/helper-position.scss)
   * [`helper-text.scss`](/overrides/helper-text.scss)
   * [`helper-visibility.scss`](/overrides/helper-visibility.scss)
+  * [`html-validator.scss`](/overrides/html-validator.scss)
   * [`shame.scss`](/overrides/shame.scss)
 
 - - - -
