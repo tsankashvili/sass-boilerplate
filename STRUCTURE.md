@@ -87,6 +87,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── helper-text.scss
     │   ├── helper-visibility.scss
     │   ├── html-validator.scss
+    │   ├── debugger.scss
     │   └── shame.scss
     ├── vendors
     │   └── breakpoint-sass
@@ -169,6 +170,7 @@ mixins can be added by creating new files. Since mixins don't output any code un
   * [`parentState.scss`](/mixins/parentState.scss)
   * [`parent-hover.scss`](/mixins/parent-hover.scss)
   * [`transitions.scss`](/mixins/transitions.scss)
+  * [`debugger.scss`](/mixins/debugger.scss)
 
 - - - -
 
@@ -240,6 +242,7 @@ The overrides layer contains the helper classes broken down into multiple files 
   * [`helper-text.scss`](/overrides/helper-text.scss)
   * [`helper-visibility.scss`](/overrides/helper-visibility.scss)
   * [`html-validator.scss`](/overrides/html-validator.scss)
+  * [`debugger.scss`](/overrides/debugger.scss)
   * [`shame.scss`](/overrides/shame.scss)
 
 - - - -

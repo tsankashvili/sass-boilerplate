@@ -1,0 +1,14 @@
+//
+// Sass Debugger
+/// @require {Boolean} $use-sass-debugger - base variable in Settings
+/// @require {Mixin} debugger - base variable in Settings
+/// @see  /Settings/base-options.scss - All base options - All base options
+//
+
+@if $use-sass-debugger == true {
+
+  body{
+    @include debugger();
+  }
+
+}

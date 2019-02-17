@@ -1,0 +1,90 @@
+// Sass Debugger
+/// @copyright João Victor <contatos.jv@hotmail.com>
+/// @license MIT
+/// @link https://github.com/jotavejv/css-sass-debugger
+//
+
+// debuger sass
+$outline: true; //change to outline.
+
+$tags: (none);
+$attrs: (style);
+$classes: (none);
+
+@mixin debugger(){
+      @each $tag in $tags {
+      #{$tag}{
+        @if $outline == true{
+          outline: solid 1px lightgray;
+        }@else {
+          &:hover {
+            outline: solid 1px lightgray;
+          }
+        }
+
+        &:after{
+          content: ' ' + '[' + quote(#{$tag}) + ']';
+          font-size: 10px;
+          color: tomato;
+          font-weight: bold;
+          position: absolute;
+          z-index: 999999999;
+        }
+      }
+    }
+
+
+    @each $attr in $attrs {
+      *[#{$attr}]{
+        @if $outline == true{
+          outline: solid 1px lightgray;
+        }@else {
+          &:hover {
+            outline: solid 1px lightgray;
+          }
+        }
+        &:after{
+          content: ' ' + '[' + quote(#{$attr}) + ']';
+          font-size: 10px;
+          color: tomato;
+          font-weight: bold;
+          position: absolute;
+          z-index: 999999999;
+        }
+      }
+    }
+    @each $class in $classes {
+      .#{$class}{
+        @if $outline == true{
+          outline: solid 1px lightgray;
+        }@else {
+          &:hover {
+            outline: solid 1px lightgray;
+          }
+        }
+        &:after{
+          content: ' ' + '[' + quote(#{$class}) + ']';
+          font-size: 10px;
+          color: tomato;
+          font-weight: bold;
+          position: absolute;
+          z-index: 999999999;
+        }
+      }
+    }
+
+    $content: 'DEBUG >> ' '$tags: #{$tags}' ' | ' '$attrs: #{$attrs}' ' | ' '$classes: #{$classes}';
+
+    &:before{
+      content: $content;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 99999;
+      font-size: 10px;
+      font-family: Verdana, 'sans-serif';
+      color: tomato;
+      text-transform: uppercase;
+    }
+
+}
