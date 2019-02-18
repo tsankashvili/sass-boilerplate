@@ -56,6 +56,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── parentState.scss
     │   ├── parent-hover.scss
     │   └── transitions.scss
+    │   └── debugger.scss
     ├── generic
     │   ├── reset.scss
     │   └── sanitize.scss
