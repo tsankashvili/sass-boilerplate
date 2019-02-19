@@ -1,4 +1,12 @@
-.grid{
-  width: 85%;
-	margin: 0 auto;
+//
+// Margin Helper Classes
+/// @require {Boolean} $use-base-grid - base variable in Settings
+/// @see  /Settings/modules-widgets.scss - All base options - All base options
+//
+
+@if $use-base-grid == true {
+  .grid{
+    width: 85%;
+  	margin: 0 auto;
+  }
 }
