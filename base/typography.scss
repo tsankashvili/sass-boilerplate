@@ -3,20 +3,23 @@
 /// @require {function} font-url - Font asset helper
 //
 
-$fonts: "AdriannaExtendedLt",
-				"AdriannaExtendedRg",
-				"AdriannaExtendedXb",
-				"AdriannaLt",
-				"AdriannaRg",
-				"DrukXCondSuperWeb";
+$fonts: "";
+// $fonts: "AdriannaExtendedLt",
+// 				"AdriannaExtendedRg",
+// 				"AdriannaExtendedXb",
+// 				"AdriannaLt",
+// 				"AdriannaRg",
+// 				"DrukXCondSuperWeb";
 
 @each $font in $fonts {
-  @font-face {
-    font-family: $font;
-    src: font-url('#{$font}.eot') format('embedded-opentype'),
-    font-url('#{$font}.woff2') format('woff2'),
-    font-url('#{$font}.woff') format('woff'),
-    font-url('#{$font}.ttf') format('truetype'),
-    font-url('#{$font}.svg##{$font}') format('svg');
-  }
+	@if($font != ''){
+	  @font-face {
+	    font-family: $font;
+	    src: font-url('#{$font}.eot') format('embedded-opentype'),
+	    font-url('#{$font}.woff2') format('woff2'),
+	    font-url('#{$font}.woff') format('woff'),
+	    font-url('#{$font}.ttf') format('truetype'),
+	    font-url('#{$font}.svg##{$font}') format('svg');
+	  }
+	}
 }
