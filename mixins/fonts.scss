@@ -8,19 +8,16 @@
 ///      @return
 ///              html[lang="ka"]{ body{ font-family: 'bpg-nino-mtavruli; font-size: 18px;} }
 //
-@mixin fonts($lang-code: null, $font-family: null, $font-size: null){
+@mixin fonts($fonts...){
   $lang-list: "ka","en";
+  $lang-code: nth($fonts,1);
   @if(contains($lang-list,$lang-code)){
     html[lang="#{$lang-code}"] &{
-      @if(not is-number($font-family)){
-        font-family: $font-family;
+      @if(length($fonts) > 1){
+        font-family: nth($fonts,2);
       }
-
-      @if(is-number($font-family) or $font-size != null){
-        @if($font-size == null){
-          $font-size: $font-family;
-        }
-        font-size: $font-size;
+      @if(length($fonts) > 2){
+        font-size: nth($fonts,3);
       }
     }
   }
