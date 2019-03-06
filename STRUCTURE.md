@@ -195,7 +195,6 @@ The base layer is for the styling of common elements without the use of classnam
 ### Objects - [/objects](/objects)
 The objects layer contains a number of classed elements. Along with the components layer most of your time will be spent here. This is where you will add new files for the objects in your project. The files included are as follows;
 
-  * [`colors-classes.scss`](/objects/colors-classes.scss)
   * [`images.scss`](/objects/images.scss)
   * [`svg.scss`](/objects/svg.scss)
 
@@ -242,6 +241,7 @@ The overrides layer contains the helper classes broken down into multiple files 
   * [`helper-position.scss`](/overrides/helper-position.scss)
   * [`helper-text.scss`](/overrides/helper-text.scss)
   * [`helper-visibility.scss`](/overrides/helper-visibility.scss)
+  * [`colors-classes.scss`](/overrides/colors-classes.scss)
   * [`html-validator.scss`](/overrides/html-validator.scss)
   * [`debugger.scss`](/overrides/debugger.scss)
   * [`shame.scss`](/overrides/shame.scss)
