@@ -13,7 +13,6 @@
 
 /* Objects - Objects and Design Patterns */
 @import
-  'objects/colors-classes',
   'objects/images',
   'objects/svg';
 
@@ -45,6 +44,7 @@
   'overrides/helper-position',
   'overrides/helper-text',
   'overrides/helper-visibility',
+  'overrides/colors-classes',
   'overrides/html-validator',
   'overrides/debugger',
   'overrides/shame';

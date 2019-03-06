@@ -65,7 +65,6 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── global.scss
     │   └── typography.scss
     ├── objects
-    │   ├── colors-classes.scss
     │   ├── images.scss
     │   └── svg.scss
     ├── animations
@@ -87,6 +86,7 @@ The boilerplate contains the entire directory structure needed for a frontend pr
     │   ├── helper-position.scss
     │   ├── helper-text.scss
     │   ├── helper-visibility.scss
+    │   ├── colors-classes.scss
     │   ├── html-validator.scss
     │   ├── debugger.scss
     │   └── shame.scss
